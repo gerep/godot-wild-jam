@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://cqyct7vmmx7hr"]
+
+[ext_resource type="PackedScene" uid="uid://dedoe7ai17311" path="res://game/turtle/turtle.tscn" id="1_6aqw7"]
+[ext_resource type="Script" uid="uid://d2yg2bh5rxblj" path="res://game/levels/down_the_road/down_the_road.gd" id="1_if13f"]
+[ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="2_djl4f"]
+[ext_resource type="PackedScene" uid="uid://cimqt8enbwu87" path="res://game/house/house.tscn" id="4_j4qpo"]
+[ext_resource type="PackedScene" uid="uid://bkx1cpiq1ysxi" path="res://game/depot/depot.tscn" id="5_pebsr"]
+
+[node name="DownTheRoad" type="Node2D" unique_id=1303816233]
+script = ExtResource("1_if13f")
+
+[node name="Turtle" parent="." unique_id=956162283 instance=ExtResource("1_6aqw7")]
+
+[node name="Road" type="Sprite2D" parent="." unique_id=1214093871]
+self_modulate = Color(0.30323282, 0.30323282, 0.30323282, 1)
+z_index = -2
+scale = Vector2(4.765625, 20.90625)
+texture = ExtResource("2_djl4f")
+metadata/_edit_lock_ = true
+
+[node name="Road2" type="Sprite2D" parent="." unique_id=310530737]
+self_modulate = Color(0.30323282, 0.30323282, 0.30323282, 1)
+z_index = -2
+position = Vector2(-4.000244, 1363)
+rotation = 1.5707964
+scale = Vector2(4.765625, 20.90625)
+texture = ExtResource("2_djl4f")
+
+[node name="PackageSpawnTimer" type="Timer" parent="." unique_id=2133508070]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="House" parent="." unique_id=1023908027 instance=ExtResource("4_j4qpo")]
+position = Vector2(391, 12)
+rotation = 1.5707964
+
+[node name="House2" parent="." unique_id=987756724 instance=ExtResource("4_j4qpo")]
+position = Vector2(-390, 0)
+rotation = -1.5707964
+
+[node name="House3" parent="." unique_id=2133773116 instance=ExtResource("4_j4qpo")]
+position = Vector2(391, 314)
+rotation = 1.5707964
+
+[node name="House4" parent="." unique_id=1892055072 instance=ExtResource("4_j4qpo")]
+position = Vector2(-390, 302)
+rotation = -1.5707964
+
+[node name="House5" parent="." unique_id=1419329329 instance=ExtResource("4_j4qpo")]
+position = Vector2(391, 612)
+rotation = 1.5707964
+
+[node name="House6" parent="." unique_id=1421659850 instance=ExtResource("4_j4qpo")]
+position = Vector2(-390, 600)
+rotation = -1.5707964
+
+[node name="House15" parent="." unique_id=1003452658 instance=ExtResource("4_j4qpo")]
+position = Vector2(391, 912)
+rotation = 1.5707964
+
+[node name="House16" parent="." unique_id=720303460 instance=ExtResource("4_j4qpo")]
+position = Vector2(-390, 900)
+rotation = -1.5707964
+
+[node name="House7" parent="." unique_id=934953753 instance=ExtResource("4_j4qpo")]
+position = Vector2(391, -286)
+rotation = 1.5707964
+
+[node name="House8" parent="." unique_id=1261902172 instance=ExtResource("4_j4qpo")]
+position = Vector2(-390, -298)
+rotation = -1.5707964
+
+[node name="House9" parent="." unique_id=1145071263 instance=ExtResource("4_j4qpo")]
+position = Vector2(391, -584)
+rotation = 1.5707964
+
+[node name="House10" parent="." unique_id=1401933548 instance=ExtResource("4_j4qpo")]
+position = Vector2(-390, -596)
+rotation = -1.5707964
+
+[node name="House11" parent="." unique_id=1117622950 instance=ExtResource("4_j4qpo")]
+position = Vector2(391, -882)
+rotation = 1.5707964
+
+[node name="House12" parent="." unique_id=946051839 instance=ExtResource("4_j4qpo")]
+position = Vector2(-390, -894)
+rotation = -1.5707964
+
+[node name="House13" parent="." unique_id=243033879 instance=ExtResource("4_j4qpo")]
+position = Vector2(391, -1180)
+rotation = 1.5707964
+
+[node name="House14" parent="." unique_id=168419734 instance=ExtResource("4_j4qpo")]
+position = Vector2(-390, -1192)
+rotation = -1.5707964
+
+[node name="Depot" parent="." unique_id=1168302159 instance=ExtResource("5_pebsr")]
+position = Vector2(0, 1761)
+rotation = 3.1415927
