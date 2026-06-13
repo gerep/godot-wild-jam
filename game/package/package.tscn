@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="1_q01na"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f5q32"]
-size = Vector2(14, 12)
+size = Vector2(28, 24)
 
 [node name="Package" type="Area2D" unique_id=283885347]
 collision_layer = 4
@@ -14,7 +14,7 @@ script = ExtResource("1_f5q32")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1958151662]
 self_modulate = Color(1, 0.15686275, 1, 1)
-scale = Vector2(0.109375, 0.09375)
+scale = Vector2(0.21875, 0.1875)
 texture = ExtResource("1_q01na")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1792981752]

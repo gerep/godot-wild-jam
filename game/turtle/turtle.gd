@@ -20,7 +20,7 @@ func _ready() -> void:
 			current_packages += 1
 			package_picked.emit(current_packages)
 	)
-	dropoff_finder_2d.area_entered.connect(func(dropoff: Node2D) -> void:
+	dropoff_finder_2d.area_entered.connect(func(dropoff: Area2D) -> void:
 		if current_packages > 0:
 			packages_delivered.emit(current_packages)
 			current_packages = 0
