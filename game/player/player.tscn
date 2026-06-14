@@ -39,7 +39,7 @@ shape = SubResource("CapsuleShape2D_a4w0n")
 
 [node name="Experience" parent="Components" unique_id=2053643762 instance=ExtResource("4_a4w0n")]
 unique_name_in_owner = true
-_base_xp = 5
+_base_xp = 10
 _flat_xp_increase = 5
 _mult_xp_increase = 1.25
 

@@ -16,7 +16,10 @@ var _xp_per_lvl: Dictionary[int, int]
 
 func _ready() -> void:
 	for i in range(_current_level, _max_level):
-		_xp_per_lvl[i] = round(_base_xp * _mult_xp_increase) + _flat_xp_increase
+		if i == 1:
+			_xp_per_lvl[i] = _base_xp
+		else:
+			_xp_per_lvl[i] = round(_xp_per_lvl[i - 1] * _mult_xp_increase) + _flat_xp_increase * (i - 1)
 
 
 func add_xp(xp: int) -> void:
@@ -32,3 +35,10 @@ func add_xp(xp: int) -> void:
 		if _current_level == _max_level:
 			print("%s reached max lvl." % str(owner.name))
 			max_lvl_reached.emit()
+		else:
+			# NOTE. Check if got exp enough to lvl up 2 and more times.
+			if _current_xp > _xp_per_lvl[_current_level]:
+				var exp_to_add = _current_xp
+				# NOTE. Remove current exp, cuz it will be added in add_xp()
+				_current_xp -= _current_xp
+				add_xp(exp_to_add)
