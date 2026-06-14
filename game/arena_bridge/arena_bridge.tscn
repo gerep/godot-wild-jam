@@ -1,10 +1,37 @@
 [gd_scene format=3 uid="uid://c67rqhkt2da3c"]
 
 [ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="1_b34jr"]
+[ext_resource type="Script" uid="uid://6gfn442rw1m0" path="res://game/arena_bridge/arena_bridge.gd" id="1_tf0vu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b34jr"]
+size = Vector2(334, 69)
 
 [node name="ArenaTransition" type="Node2D" unique_id=1750952575]
+script = ExtResource("1_tf0vu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=170811246]
 self_modulate = Color(1, 1, 1, 0.28235295)
 scale = Vector2(2.59375, 10.460937)
 texture = ExtResource("1_b34jr")
+
+[node name="StartTriggerArea2D" type="Area2D" parent="." unique_id=1470185995]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartTriggerArea2D" unique_id=1725081981]
+position = Vector2(0, -636)
+shape = SubResource("RectangleShape2D_b34jr")
+
+[node name="EndTriggerArea2D" type="Area2D" parent="." unique_id=1532361452]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndTriggerArea2D" unique_id=1189749098]
+position = Vector2(0, 636)
+shape = SubResource("RectangleShape2D_b34jr")
+
+[node name="StartExitMarker2D" type="Marker2D" parent="." unique_id=2088123193]
+position = Vector2(0, -742)
+
+[node name="EndExitMarker2D2" type="Marker2D" parent="." unique_id=211147883]
+position = Vector2(0, 742)

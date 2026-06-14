@@ -30,5 +30,18 @@ position = Vector2(0, -439)
 scale = Vector2(12.703125, 12.703125)
 texture = ExtResource("3_21rq6")
 
+[node name="Arena3" type="Node2D" parent="." unique_id=1892570524]
+position = Vector2(-3244, -2401)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Arena3" unique_id=2142252034]
+self_modulate = Color(1, 1, 1, 0.28235295)
+position = Vector2(339, -1283)
+scale = Vector2(12.703125, 12.703125)
+texture = ExtResource("3_21rq6")
+
 [node name="ArenaBridge" parent="." unique_id=1750952575 instance=ExtResource("5_p0s4x")]
 position = Vector2(0, -1427)
+
+[node name="ArenaBridge2" parent="." unique_id=2009736131 instance=ExtResource("5_p0s4x")]
+position = Vector2(-1468, -3256)
+rotation = 1.5707964
