@@ -5,7 +5,6 @@ signal restored
 signal destroyed
 
 # TODO. On core destroyed destroye owner too.
-@export var is_core := false
 @export var health: float
 @export var core_parents: Array[Cell]
 @export var core_children: Array[Cell]

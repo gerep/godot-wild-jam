@@ -36,7 +36,7 @@ func _ready() -> void:
 		else:
 			cell.activate_hurtbox_layer(CollisionLayers.ENEMY_HURTBOX)
 
-		if cell.is_core:
+		if cell is CoreCell:
 			cell.destroyed.connect(func():
 				destroyed.emit()
 			)
@@ -54,7 +54,7 @@ func calculate_core_connections():
 			continue
 		var cell := child as Cell
 
-		if cell.is_core:
+		if cell is CoreCell:
 			core = cell
 
 		cell.core_children.clear()

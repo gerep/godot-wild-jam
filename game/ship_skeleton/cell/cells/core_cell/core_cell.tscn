@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dobbdkhwdy6k7"]
+
+[ext_resource type="PackedScene" uid="uid://73o17dpehsvx" path="res://game/ship_skeleton/cell/cell.tscn" id="1_83jxq"]
+[ext_resource type="Script" uid="uid://ck1gqnwn00iqd" path="res://game/ship_skeleton/cell/cells/core_cell/core_cell.gd" id="2_kmhev"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kmhev"]
+resource_local_to_scene = true
+radius = 21.0
+height = 42.0
+
+[node name="CoreCell" unique_id=1435320636 instance=ExtResource("1_83jxq")]
+script = ExtResource("2_kmhev")
+
+[node name="Sprite2D" parent="." index="0" unique_id=1975990942]
+self_modulate = Color(0.9902808, 0.13887525, 0.29655525, 1)
+
+[node name="CollisionShape2D" parent="Hurtbox2D" parent_id_path=PackedInt32Array(146611675) index="0" unique_id=2074960276]
+shape = SubResource("CapsuleShape2D_kmhev")
+
+[editable path="Hurtbox2D"]
