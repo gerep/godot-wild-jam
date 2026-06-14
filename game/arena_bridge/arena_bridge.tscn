@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c67rqhkt2da3c"]
+
+[ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="1_b34jr"]
+
+[node name="ArenaTransition" type="Node2D" unique_id=1750952575]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=170811246]
+self_modulate = Color(1, 1, 1, 0.28235295)
+scale = Vector2(2.59375, 10.460937)
+texture = ExtResource("1_b34jr")

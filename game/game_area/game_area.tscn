@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b5pqn8r6kxox2"]
+
+[ext_resource type="Script" uid="uid://biw1lu5iws1o4" path="res://game/game_area/game_area.gd" id="1_wu7i3"]
+[ext_resource type="PackedScene" uid="uid://dedoe7ai17311" path="res://game/player/player.tscn" id="2_hbsx8"]
+[ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="3_21rq6"]
+[ext_resource type="PackedScene" uid="uid://ctcysahbtl4wg" path="res://game/enemies/enemy_test/enemy_test.tscn" id="4_ybvrr"]
+[ext_resource type="PackedScene" uid="uid://c67rqhkt2da3c" path="res://game/arena_bridge/arena_bridge.tscn" id="5_p0s4x"]
+
+[node name="GameArea" type="Node2D" unique_id=1471830763]
+script = ExtResource("1_wu7i3")
+
+[node name="Player" parent="." unique_id=956162283 instance=ExtResource("2_hbsx8")]
+
+[node name="Arena1" type="Node2D" parent="." unique_id=280672596]
+
+[node name="Sprite2D" type="Sprite2D" parent="Arena1" unique_id=61339127]
+self_modulate = Color(1, 1, 1, 0.28235295)
+scale = Vector2(12.703125, 12.703125)
+texture = ExtResource("3_21rq6")
+
+[node name="EnemyTest" parent="Arena1" unique_id=175218643 instance=ExtResource("4_ybvrr")]
+position = Vector2(467, -428)
+
+[node name="Arena2" type="Node2D" parent="." unique_id=2019157765]
+position = Vector2(0, -2413)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Arena2" unique_id=1794582604]
+self_modulate = Color(1, 1, 1, 0.28235295)
+position = Vector2(0, -439)
+scale = Vector2(12.703125, 12.703125)
+texture = ExtResource("3_21rq6")
+
+[node name="ArenaBridge" parent="." unique_id=1750952575 instance=ExtResource("5_p0s4x")]
+position = Vector2(0, -1427)
