@@ -7,3 +7,5 @@ script = ExtResource("1_0h88w")
 
 [node name="CellConnectors" type="Node2D" parent="." unique_id=1905180700]
 unique_name_in_owner = true
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
