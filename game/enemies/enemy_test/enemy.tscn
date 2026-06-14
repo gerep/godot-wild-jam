@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://b4154adjjbvvc" path="res://components/hurtbox/component_hurtbox_2d.tscn" id="3_d121y"]
 [ext_resource type="PackedScene" uid="uid://cc0xm7ql0sgut" path="res://components/health/component_health.tscn" id="4_cflxb"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wjkr5"]
+radius = 63.126858
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8sgna"]
 resource_local_to_scene = true
 radius = 63.0
@@ -13,11 +16,13 @@ height = 134.0
 [node name="Enemy" type="CharacterBody2D" unique_id=175218643 groups=["enemies"]]
 collision_layer = 4
 collision_mask = 7
+motion_mode = 1
 script = ExtResource("1_wjkr5")
 health = 5.0
-xp = 6
+xp = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1807594157]
+shape = SubResource("CircleShape2D_wjkr5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1035438599]
 self_modulate = Color(0.94509804, 0.15294118, 0.27450982, 1)

@@ -11,6 +11,7 @@ var auto_move_target: Vector2
 
 @onready var _hurtbox_2d: ComponentHurtbox2D = %Hurtbox2D
 @onready var _experience: ComponentExperience = %Experience
+@onready var _ship_skeleton: Node2D = %ShipSkeleton
 
 
 func _ready() -> void:
@@ -29,7 +30,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	if is_auto_moving:
 		var distance_to_target := global_position.distance_to(auto_move_target)
-		# This is a way to avoid the player from overshoothing the `auto_move_target` when the 
+		# This is a way to avoid the player from overshoothing the `auto_move_target` when the
 		# transport speed is too high.
 		var max_travel_distance := TRANSPORTING_SPEED * delta
 

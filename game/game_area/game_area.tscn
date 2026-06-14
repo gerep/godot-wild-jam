@@ -21,6 +21,18 @@ texture = ExtResource("3_21rq6")
 [node name="Enemy" parent="Arena1" unique_id=175218643 instance=ExtResource("4_ybvrr")]
 position = Vector2(467, -428)
 
+[node name="Enemy2" parent="Arena1" unique_id=269510465 instance=ExtResource("4_ybvrr")]
+position = Vector2(-415, -411)
+
+[node name="Enemy3" parent="Arena1" unique_id=810885216 instance=ExtResource("4_ybvrr")]
+position = Vector2(566, 34)
+
+[node name="Enemy4" parent="Arena1" unique_id=2117836155 instance=ExtResource("4_ybvrr")]
+position = Vector2(-486, -18)
+
+[node name="Enemy5" parent="Arena1" unique_id=279085965 instance=ExtResource("4_ybvrr")]
+position = Vector2(262, 440)
+
 [node name="Arena2" type="Node2D" parent="." unique_id=2019157765]
 position = Vector2(0, -2413)
 
