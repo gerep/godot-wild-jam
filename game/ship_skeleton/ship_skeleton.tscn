@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://p57h3besvdad" path="res://game/ship_skeleton/ship_skeleton.gd" id="1_0h88w"]
 [ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="1_nscq2"]
-[ext_resource type="Script" uid="uid://b8q0gvn2dj335" path="res://game/player/base_turret.gd" id="3_y8qy0"]
+[ext_resource type="Script" uid="uid://b8q0gvn2dj335" path="res://game/player/base_player_turret.gd" id="3_y8qy0"]
 [ext_resource type="PackedScene" uid="uid://73o17dpehsvx" path="res://game/ship_skeleton/cell/cell.tscn" id="5_y8qy0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0h88w"]
