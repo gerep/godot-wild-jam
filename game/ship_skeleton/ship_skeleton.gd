@@ -11,6 +11,8 @@ func _ready() -> void:
 		collision_shape.position = to_local(hurtbox_shape.global_position)
 		add_sibling.call_deferred(collision_shape)
 
+		cell.set_related_collision_shape(collision_shape)
+
 		# Activate proper hurtbox layer, since cell can be owned by player or enemy.
 		if owner is Player:
 			cell.activate_hurtbox_layer(CollisionLayers.PLAYER_HURTBOX)
