@@ -4,3 +4,6 @@
 
 [node name="ShipSkeleton" type="Node2D" unique_id=1402492542]
 script = ExtResource("1_0h88w")
+
+[node name="CellConnectors" type="Node2D" parent="." unique_id=1905180700]
+unique_name_in_owner = true

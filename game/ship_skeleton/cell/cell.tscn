@@ -13,6 +13,7 @@ height = 42.0
 [node name="Cell" type="Node2D" unique_id=1435320636]
 script = ExtResource("1_cjhyy")
 health = 5.0
+repair_rate = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1975990942]
 self_modulate = Color(0.19387385, 0.6540687, 0.13022849, 1)
@@ -21,6 +22,7 @@ texture = ExtResource("2_ruldg")
 
 [node name="Hurtbox2D" parent="." unique_id=146611675 instance=ExtResource("3_mnm1f")]
 unique_name_in_owner = true
+collision_layer = 524288
 
 [node name="CollisionShape2D" parent="Hurtbox2D" index="0" unique_id=2074960276]
 shape = SubResource("CapsuleShape2D_ruldg")

@@ -74,6 +74,7 @@ shoot={
 2d_physics/layer_10="player_hurtbox"
 2d_physics/layer_11="enemy_hurtbox"
 2d_physics/layer_12="player_exp_hurtbox"
+2d_physics/layer_20="core_connection_checker"
 
 [physics]
 

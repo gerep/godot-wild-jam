@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cdeg2ih3g8ys4"]
+
+[node name="CellConnector" type="Line2D" unique_id=56162775]
+points = PackedVector2Array(126, 7, 2, 7)
+closed = true
+width = 4.0
+default_color = Color(0.3882353, 1, 1, 0.5019608)
