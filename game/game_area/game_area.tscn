@@ -2,58 +2,29 @@
 
 [ext_resource type="Script" uid="uid://biw1lu5iws1o4" path="res://game/game_area/game_area.gd" id="1_wu7i3"]
 [ext_resource type="PackedScene" uid="uid://dedoe7ai17311" path="res://game/player/player.tscn" id="2_hbsx8"]
-[ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="3_21rq6"]
+[ext_resource type="PackedScene" uid="uid://b8s7r2s04sqw3" path="res://game/area/area.tscn" id="4_p0s4x"]
 [ext_resource type="PackedScene" uid="uid://ctcysahbtl4wg" path="res://game/enemies/enemy_test/enemy.tscn" id="4_ybvrr"]
 [ext_resource type="PackedScene" uid="uid://c67rqhkt2da3c" path="res://game/arena_bridge/arena_bridge.tscn" id="5_p0s4x"]
 
 [node name="GameArea" type="Node2D" unique_id=1471830763]
 script = ExtResource("1_wu7i3")
 
-[node name="Player" parent="." unique_id=956162283 instance=ExtResource("2_hbsx8")]
+[node name="Area" parent="." unique_id=495972852 instance=ExtResource("4_p0s4x")]
 
-[node name="Arena1" type="Node2D" parent="." unique_id=280672596]
+[node name="Area2" parent="." unique_id=427362067 instance=ExtResource("4_p0s4x")]
+position = Vector2(30, -2611)
 
-[node name="Sprite2D" type="Sprite2D" parent="Arena1" unique_id=61339127]
-self_modulate = Color(1, 1, 1, 0.28235295)
-scale = Vector2(12.703125, 12.703125)
-texture = ExtResource("3_21rq6")
-
-[node name="Enemy" parent="Arena1" unique_id=175218643 instance=ExtResource("4_ybvrr")]
-position = Vector2(467, -428)
-
-[node name="Enemy2" parent="Arena1" unique_id=269510465 instance=ExtResource("4_ybvrr")]
-position = Vector2(-415, -411)
-
-[node name="Enemy3" parent="Arena1" unique_id=810885216 instance=ExtResource("4_ybvrr")]
-position = Vector2(566, 34)
-
-[node name="Enemy4" parent="Arena1" unique_id=2117836155 instance=ExtResource("4_ybvrr")]
-position = Vector2(-486, -18)
-
-[node name="Enemy5" parent="Arena1" unique_id=279085965 instance=ExtResource("4_ybvrr")]
-position = Vector2(262, 440)
-
-[node name="Arena2" type="Node2D" parent="." unique_id=2019157765]
-position = Vector2(0, -2413)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Arena2" unique_id=1794582604]
-self_modulate = Color(1, 1, 1, 0.28235295)
-position = Vector2(0, -439)
-scale = Vector2(12.703125, 12.703125)
-texture = ExtResource("3_21rq6")
-
-[node name="Arena3" type="Node2D" parent="." unique_id=1892570524]
-position = Vector2(-3244, -2401)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Arena3" unique_id=2142252034]
-self_modulate = Color(1, 1, 1, 0.28235295)
-position = Vector2(339, -1283)
-scale = Vector2(12.703125, 12.703125)
-texture = ExtResource("3_21rq6")
+[node name="Area3" parent="." unique_id=307216731 instance=ExtResource("4_p0s4x")]
+position = Vector2(-2603, -2615)
 
 [node name="ArenaBridge" parent="." unique_id=1750952575 instance=ExtResource("5_p0s4x")]
-position = Vector2(0, -1427)
+position = Vector2(11, -1301)
 
 [node name="ArenaBridge2" parent="." unique_id=2009736131 instance=ExtResource("5_p0s4x")]
-position = Vector2(-1468, -3256)
+position = Vector2(-1283, -2158)
 rotation = 1.5707964
+
+[node name="Player" parent="." unique_id=956162283 instance=ExtResource("2_hbsx8")]
+
+[node name="Enemy" parent="." unique_id=175218643 instance=ExtResource("4_ybvrr")]
+position = Vector2(467, -428)

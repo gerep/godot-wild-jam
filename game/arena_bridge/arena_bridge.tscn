@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://6gfn442rw1m0" path="res://game/arena_bridge/arena_bridge.gd" id="1_tf0vu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b34jr"]
-size = Vector2(334, 69)
+size = Vector2(180, 70)
 
 [node name="ArenaTransition" type="Node2D" unique_id=1750952575]
 script = ExtResource("1_tf0vu")

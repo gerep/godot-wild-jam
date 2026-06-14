@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b8s7r2s04sqw3"]
+
+[ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="1_7iivh"]
+
+[node name="Area" type="Node2D" unique_id=495972852]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1563155781]
+modulate = Color(1, 1, 1, 0.25490198)
+scale = Vector2(12, 12)
+texture = ExtResource("1_7iivh")
+
+[node name="Boundary" type="StaticBody2D" parent="." unique_id=1401375968]
+collision_mask = 0
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Boundary" unique_id=1486995425]
+position = Vector2(-746, -619)
+polygon = PackedVector2Array(120, -145, 1375, -147, 1374, -103, 116, -90, 95, -90, 75, -78, 57, -62, 38, -39, 31, -24, 27, 1243, 41, 1279, 67, 1307, 99, 1330, 129, 1342, 1353, 1342, 1377, 1336, 1411, 1315, 1441, 1284, 1460, 1254, 1467, 1228, 1469, 1173, 1463, 21, 1461, -18, 1446, -50, 1411, -82, 1375, -102, 1375, -146, 1513, 2, 1511, 1249, 1376, 1385, 108, 1386, -21, 1244, -21, -24)

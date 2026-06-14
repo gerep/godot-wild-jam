@@ -28,9 +28,12 @@ func _ready() -> void:
 func get_current_health_percentage() -> float:
 	return current_health / max_health
 
+
 func set_health(health: float) -> void:
+	print("set_health called with: ", health)
 	max_health = health
 	current_health = health
+
 
 func take_damage(damage: float) -> void:
 	current_health -= damage

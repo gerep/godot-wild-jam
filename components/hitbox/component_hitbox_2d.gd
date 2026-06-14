@@ -15,5 +15,9 @@ func _notify_about_collision(hurtbox: ComponentHurtbox2D) -> void:
 	hurtbox.got_hit.emit(self)
 
 
-func _on_area_entered(hurtbox: ComponentHurtbox2D) -> void:
+func _on_area_entered(area: Area2D) -> void:
+	var hurtbox := area as ComponentHurtbox2D
+	if hurtbox == null:
+		return
+
 	_notify_about_collision.call_deferred(hurtbox)

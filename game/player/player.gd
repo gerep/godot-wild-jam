@@ -10,6 +10,8 @@ var is_auto_moving: bool = false
 var auto_move_target: Vector2
 
 @onready var _hurtbox_2d: ComponentHurtbox2D = %ExpHurtbox2D
+@onready var _collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var _hurtbox_2d: ComponentHurtbox2D = %Hurtbox2D
 @onready var _experience: ComponentExperience = %Experience
 
 
@@ -33,6 +35,7 @@ func _physics_process(delta: float) -> void:
 			global_position = auto_move_target
 			velocity = Vector2.ZERO
 			is_auto_moving = false
+			_collision_shape_2d.set_deferred(&"disabled", false)
 		else:
 			var auto_move_direction := global_position.direction_to(auto_move_target)
 			velocity = auto_move_direction * TRANSPORTING_SPEED
@@ -56,3 +59,4 @@ func auto_move_to(pos: Vector2) -> void:
 	is_auto_moving = true
 	auto_move_target = pos
 	velocity = Vector2.ZERO
+	_collision_shape_2d.set_deferred(&"disabled", true)
