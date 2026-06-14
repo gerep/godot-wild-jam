@@ -21,7 +21,8 @@ _base_xp = 10
 _flat_xp_increase = 5
 _mult_xp_increase = 1.25
 
-[node name="Hurtbox2D" parent="Components" unique_id=146611675 instance=ExtResource("3_8soms")]
+[node name="ExpHurtbox2D" parent="Components" unique_id=146611675 instance=ExtResource("3_8soms")]
 unique_name_in_owner = true
+collision_layer = 2048
 
 [node name="BasicPlayerShip" parent="." unique_id=1402492542 instance=ExtResource("4_5fytw")]

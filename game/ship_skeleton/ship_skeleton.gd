@@ -1,6 +1,8 @@
 class_name ShipSkeleton
 extends Node2D
 
+signal destroyed
+
 func _ready() -> void:
 	for cell: Cell in get_children():
 		# Gives parent collision shapes of all cells. Since the movement logic is located in owner node.
@@ -14,3 +16,8 @@ func _ready() -> void:
 			cell.activate_hurtbox_layer(CollisionLayers.PLAYER_HURTBOX)
 		else:
 			cell.activate_hurtbox_layer(CollisionLayers.ENEMY_HURTBOX)
+
+		if cell.is_core:
+			cell.destroyed.connect(func():
+				destroyed.emit()
+			)

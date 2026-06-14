@@ -3,14 +3,16 @@
 [ext_resource type="Script" uid="uid://bt6o8bkpam2te" path="res://game/ship_skeleton/cell/cell.gd" id="1_cjhyy"]
 [ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="2_ruldg"]
 [ext_resource type="PackedScene" uid="uid://b4154adjjbvvc" path="res://components/hurtbox/component_hurtbox_2d.tscn" id="3_mnm1f"]
+[ext_resource type="PackedScene" uid="uid://cc0xm7ql0sgut" path="res://components/health/component_health.tscn" id="4_ruldg"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cjhyy"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ruldg"]
 resource_local_to_scene = true
 radius = 21.0
 height = 42.0
 
 [node name="Cell" type="Node2D" unique_id=1435320636]
 script = ExtResource("1_cjhyy")
+health = 5.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1975990942]
 self_modulate = Color(0.19387385, 0.6540687, 0.13022849, 1)
@@ -21,6 +23,10 @@ texture = ExtResource("2_ruldg")
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" parent="Hurtbox2D" index="0" unique_id=2074960276]
-shape = SubResource("CapsuleShape2D_cjhyy")
+shape = SubResource("CapsuleShape2D_ruldg")
+
+[node name="Health" parent="." unique_id=562956058 instance=ExtResource("4_ruldg")]
+unique_name_in_owner = true
+max_health = 15.0
 
 [editable path="Hurtbox2D"]

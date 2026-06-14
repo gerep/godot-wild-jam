@@ -9,7 +9,7 @@ const AUTO_MOVE_STOP_DISTANCE = 4.0
 var is_auto_moving: bool = false
 var auto_move_target: Vector2
 
-@onready var _hurtbox_2d: ComponentHurtbox2D = %Hurtbox2D
+@onready var _hurtbox_2d: ComponentHurtbox2D = %ExpHurtbox2D
 @onready var _experience: ComponentExperience = %Experience
 
 
