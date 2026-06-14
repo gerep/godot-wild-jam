@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b4154adjjbvvc"]
+
+[ext_resource type="Script" uid="uid://m1a2giihi40n" path="res://lib/components/2d/hurtbox/component_hurtbox_2d.gd" id="1_35j7c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kd20l"]
+resource_local_to_scene = true
+radius = 13.0
+height = 54.0
+
+[node name="Hurtbox2D" type="Area2D" unique_id=146611675]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_35j7c")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2074960276]
+shape = SubResource("CapsuleShape2D_kd20l")
+debug_color = Color(0.110681, 0.642318, 0.247182, 0.42)

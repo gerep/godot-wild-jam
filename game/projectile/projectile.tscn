@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cnf8dv1t2lgxb"]
+
+[ext_resource type="PackedScene" uid="uid://c1flcsvrxwav7" path="res://components/hitbox/component_hitbox_2d.tscn" id="1_4f6j3"]
+[ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="1_06jd3"]
+[ext_resource type="Script" uid="uid://oghk0ir2n3ci" path="res://game/projectile/projectile.gd" id="1_08h31"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_08h31"]
+resource_local_to_scene = true
+radius = 5.0
+height = 10.0
+
+[node name="Projectile" type="Node2D" unique_id=865771493]
+script = ExtResource("1_08h31")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=698949931]
+self_modulate = Color(1, 1, 0.03529412, 1)
+scale = Vector2(0.078125, 0.078125)
+texture = ExtResource("1_06jd3")
+
+[node name="Hitbox2D" parent="." unique_id=1358559902 instance=ExtResource("1_4f6j3")]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" parent="Hitbox2D" index="0" unique_id=1055038057]
+shape = SubResource("CapsuleShape2D_08h31")
+
+[editable path="Hitbox2D"]

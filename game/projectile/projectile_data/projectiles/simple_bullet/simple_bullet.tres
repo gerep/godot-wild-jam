@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ProjectileData" format=3 uid="uid://c1q122a7cfbs5"]
+
+[ext_resource type="Script" uid="uid://s2221djsiqxp" path="res://game/projectile/projectile_data/projectile_data.gd" id="1_0q2hd"]
+[ext_resource type="PackedScene" uid="uid://doftqugaig62m" path="res://game/projectile/projectile_data/projectiles/simple_bullet/simple_bullet.tscn" id="1_xgegt"]
+
+[resource]
+script = ExtResource("1_0q2hd")
+projectile = ExtResource("1_xgegt")
+damage = 1.0
+speed = 300.0
+metadata/_custom_type_script = "uid://s2221djsiqxp"

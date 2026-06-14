@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://6kn2hv7iovmw"]
+
+[ext_resource type="Script" uid="uid://bbu44kn6sy5fj" path="res://game/xp_orb/xp_orb.gd" id="1_p0xse"]
+[ext_resource type="Texture2D" uid="uid://c5oji2fytr2bi" path="res://game/xp_orb/xp_orb_data/xp_orbs/small_xp_orb.png" id="2_6wtkf"]
+[ext_resource type="PackedScene" uid="uid://c1flcsvrxwav7" path="res://components/hitbox/component_hitbox_2d.tscn" id="3_mhopk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_brhfh"]
+radius = 2.0
+
+[node name="XpOrb" type="Node2D" unique_id=1150297937]
+script = ExtResource("1_p0xse")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1444255762]
+unique_name_in_owner = true
+texture = ExtResource("2_6wtkf")
+
+[node name="Hitbox2D" parent="." unique_id=1358559902 instance=ExtResource("3_mhopk")]
+unique_name_in_owner = true
+collision_mask = 512
+
+[node name="CollisionShape2D" parent="Hitbox2D" index="0" unique_id=1055038057]
+shape = SubResource("CircleShape2D_brhfh")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1567246028]
+unique_name_in_owner = true
+
+[editable path="Hitbox2D"]

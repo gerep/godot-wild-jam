@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="XpOrbData" format=3 uid="uid://bn2fep4aqjj38"]
+
+[ext_resource type="Script" uid="uid://bvxqbbjx5fm8y" path="res://game/xp_orb/xp_orb_data/xp_orb_data.gd" id="1_awudx"]
+[ext_resource type="Texture2D" uid="uid://c5oji2fytr2bi" path="res://game/xp_orb/xp_orb_data/xp_orbs/small_xp_orb.png" id="1_se48s"]
+
+[resource]
+script = ExtResource("1_awudx")
+id = 1
+orb_sprite = ExtResource("1_se48s")
+xp_amount = 1
+metadata/_custom_type_script = "uid://bvxqbbjx5fm8y"

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1flcsvrxwav7"]
+
+[ext_resource type="Script" uid="uid://bh07e5hs6eihb" path="res://lib/components/2d/hitbox/component_hitbox_2d.gd" id="1_dhyth"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_huh8w"]
+resource_local_to_scene = true
+
+[node name="Hitbox2D" type="Area2D" unique_id=1358559902]
+editor_description = "Bug: has to be monitorable to detect collision with the tilemap"
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_dhyth")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1055038057]
+shape = SubResource("CapsuleShape2D_huh8w")
+debug_color = Color(0.933869, 0.187373, 0.44992, 0.42)
