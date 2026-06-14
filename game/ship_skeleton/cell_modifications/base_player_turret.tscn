@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dbr5ppouefhpn"]
+
+[ext_resource type="Script" uid="uid://b8q0gvn2dj335" path="res://game/ship_skeleton/cell_modifications/base_player_turret.gd" id="1_oml5i"]
+[ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="2_jnh57"]
+
+[node name="BasePlayerTurret" type="Node2D" unique_id=192713686]
+script = ExtResource("1_oml5i")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=849960809]
+scale = Vector2(0.171875, 0.17187501)
+texture = ExtResource("2_jnh57")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=669926242]
+position = Vector2(7, 0)
+scale = Vector2(0.109375, 0.03125)
+texture = ExtResource("2_jnh57")
+
+[node name="ShootingPos" type="Marker2D" parent="." unique_id=1957190253]
+unique_name_in_owner = true
+position = Vector2(15, 0)

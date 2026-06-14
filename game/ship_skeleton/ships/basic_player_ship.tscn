@@ -2,49 +2,172 @@
 
 [ext_resource type="PackedScene" uid="uid://bf4ndmq7p4rge" path="res://game/ship_skeleton/ship_skeleton.tscn" id="1_2oay7"]
 [ext_resource type="PackedScene" uid="uid://73o17dpehsvx" path="res://game/ship_skeleton/cell/cell.tscn" id="2_oj6ym"]
-[ext_resource type="Script" uid="uid://b8q0gvn2dj335" path="res://game/ship_skeleton/cell_modifications/base_player_turret.gd" id="3_tw0ep"]
-[ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="4_nvvbi"]
-[ext_resource type="PackedScene" uid="uid://cdeg2ih3g8ys4" path="res://game/ship_skeleton/cell_connector/cell_connector.tscn" id="5_kwog3"]
+[ext_resource type="PackedScene" uid="uid://dbr5ppouefhpn" path="res://game/ship_skeleton/cell_modifications/base_player_turret.tscn" id="3_gecbi"]
+[ext_resource type="PackedScene" uid="uid://cdeg2ih3g8ys4" path="res://game/ship_skeleton/cell_connector/cell_connector.tscn" id="3_gehtf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gecbi"]
+resource_local_to_scene = true
+radius = 21.0
+height = 42.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kwog3"]
+resource_local_to_scene = true
+radius = 21.0
+height = 42.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwr2t"]
+resource_local_to_scene = true
+radius = 21.0
+height = 42.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_grfuh"]
+resource_local_to_scene = true
+radius = 21.0
+height = 42.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bgui2"]
+resource_local_to_scene = true
+radius = 21.0
+height = 42.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yl3a2"]
+resource_local_to_scene = true
+radius = 21.0
+height = 42.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ioi8"]
 resource_local_to_scene = true
 radius = 45.0
 height = 90.0
 
 [node name="BasicPlayerShip" unique_id=1402492542 instance=ExtResource("1_2oay7")]
 
-[node name="Cell" parent="." index="0" unique_id=1435320636 instance=ExtResource("2_oj6ym")]
+[node name="Cell" parent="." index="0" unique_id=1435320636 node_paths=PackedStringArray("core_parents", "core_children") instance=ExtResource("2_oj6ym")]
 position = Vector2(70, 0)
+core_parents = [NodePath("../Core")]
+core_children = [NodePath("../Cell2")]
 
-[node name="Core" parent="." index="1" unique_id=1463715219 instance=ExtResource("2_oj6ym")]
-is_core = true
+[node name="Sprite2D" parent="Cell" index="0" unique_id=1975990942]
+self_modulate = Color(0.29587898, 0.6338359, 0.33026555, 1)
 
-[node name="Sprite2D" parent="Core" index="0" unique_id=1975990942]
-scale = Vector2(0.70312494, 0.703125)
+[node name="Hurtbox2D" parent="Cell" index="1" unique_id=146611675]
+collision_layer = 524289
 
-[node name="CollisionShape2D" parent="Core/Hurtbox2D" parent_id_path=PackedInt32Array(1463715219, 146611675) index="0" unique_id=2074960276]
+[node name="CollisionShape2D" parent="Cell/Hurtbox2D" index="0" unique_id=2074960276]
+shape = SubResource("CapsuleShape2D_gecbi")
+
+[node name="Cell2" parent="." index="1" unique_id=43571836 node_paths=PackedStringArray("core_parents", "core_children") instance=ExtResource("2_oj6ym")]
+position = Vector2(116, 0)
+core_parents = [NodePath("../Cell")]
+core_children = [NodePath("../Cell3"), NodePath("../Cell6")]
+
+[node name="Sprite2D" parent="Cell2" index="0" unique_id=1975990942]
+self_modulate = Color(0.29587898, 0.6338359, 0.33026555, 1)
+
+[node name="Hurtbox2D" parent="Cell2" index="1" unique_id=146611675]
+collision_layer = 524289
+
+[node name="CollisionShape2D" parent="Cell2/Hurtbox2D" index="0" unique_id=2074960276]
+shape = SubResource("CapsuleShape2D_kwog3")
+
+[node name="Cell6" parent="." index="2" unique_id=960448842 node_paths=PackedStringArray("core_parents") instance=ExtResource("2_oj6ym")]
+position = Vector2(123, -43)
+core_parents = [NodePath("../Cell2")]
+
+[node name="Sprite2D" parent="Cell6" index="0" unique_id=1975990942]
+self_modulate = Color(0.29587898, 0.6338359, 0.33026555, 1)
+
+[node name="Hurtbox2D" parent="Cell6" index="1" unique_id=146611675]
+collision_layer = 524289
+
+[node name="CollisionShape2D" parent="Cell6/Hurtbox2D" index="0" unique_id=2074960276]
 shape = SubResource("CapsuleShape2D_fwr2t")
 
-[node name="BasePlayerTurret" type="Node2D" parent="Core" index="2" unique_id=1806903983]
-script = ExtResource("3_tw0ep")
+[node name="Cell3" parent="." index="3" unique_id=1176425498 node_paths=PackedStringArray("core_parents", "core_children") instance=ExtResource("2_oj6ym")]
+position = Vector2(120, 45)
+core_parents = [NodePath("../Cell2")]
+core_children = [NodePath("../Cell4"), NodePath("../Cell5")]
 
-[node name="Sprite2D" type="Sprite2D" parent="Core/BasePlayerTurret" index="0" unique_id=526636957]
-scale = Vector2(0.265625, 0.265625)
-texture = ExtResource("4_nvvbi")
+[node name="Sprite2D" parent="Cell3" index="0" unique_id=1975990942]
+self_modulate = Color(0.29587898, 0.6338359, 0.33026555, 1)
 
-[node name="Sprite2D2" type="Sprite2D" parent="Core/BasePlayerTurret" index="1" unique_id=240496195]
-position = Vector2(26.999996, 0)
-scale = Vector2(0.171875, 0.078125)
-texture = ExtResource("4_nvvbi")
+[node name="Hurtbox2D" parent="Cell3" index="1" unique_id=146611675]
+collision_layer = 524289
 
-[node name="ShootingPos" type="Marker2D" parent="Core/BasePlayerTurret" index="2" unique_id=247378389]
-position = Vector2(39, 0)
+[node name="CollisionShape2D" parent="Cell3/Hurtbox2D" index="0" unique_id=2074960276]
+shape = SubResource("CapsuleShape2D_grfuh")
 
-[node name="CellConnector" type="Line2D" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="0" unique_id=56162775 instance=ExtResource("5_kwog3")]
+[node name="Cell4" parent="." index="4" unique_id=1876519128 node_paths=PackedStringArray("core_parents") instance=ExtResource("2_oj6ym")]
+position = Vector2(121, 89)
+core_parents = [NodePath("../Cell3")]
+
+[node name="Sprite2D" parent="Cell4" index="0" unique_id=1975990942]
+self_modulate = Color(0.29587898, 0.6338359, 0.33026555, 1)
+
+[node name="Hurtbox2D" parent="Cell4" index="1" unique_id=146611675]
+collision_layer = 524289
+
+[node name="CollisionShape2D" parent="Cell4/Hurtbox2D" index="0" unique_id=2074960276]
+shape = SubResource("CapsuleShape2D_bgui2")
+
+[node name="BasePlayerTurret" parent="Cell4" index="3" unique_id=192713686 instance=ExtResource("3_gecbi")]
+
+[node name="Cell5" parent="." index="5" unique_id=1438899556 node_paths=PackedStringArray("core_parents") instance=ExtResource("2_oj6ym")]
+position = Vector2(165, 44)
+core_parents = [NodePath("../Cell3")]
+
+[node name="Sprite2D" parent="Cell5" index="0" unique_id=1975990942]
+self_modulate = Color(0.29587898, 0.6338359, 0.33026555, 1)
+
+[node name="Hurtbox2D" parent="Cell5" index="1" unique_id=146611675]
+collision_layer = 524289
+
+[node name="CollisionShape2D" parent="Cell5/Hurtbox2D" index="0" unique_id=2074960276]
+shape = SubResource("CapsuleShape2D_yl3a2")
+
+[node name="Core" parent="." index="6" unique_id=2079103436 node_paths=PackedStringArray("core_children") instance=ExtResource("2_oj6ym")]
+is_core = true
+core_children = [NodePath("../Cell")]
+
+[node name="Sprite2D" parent="Core" index="0" unique_id=1975990942]
+self_modulate = Color(0.29587898, 0.6338359, 0.33026555, 1)
+scale = Vector2(0.70312494, 0.703125)
+
+[node name="Hurtbox2D" parent="Core" index="1" unique_id=146611675]
+collision_layer = 524289
+
+[node name="CollisionShape2D" parent="Core/Hurtbox2D" index="0" unique_id=2074960276]
+shape = SubResource("CapsuleShape2D_3ioi8")
+
+[node name="CellConnector" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="0" unique_id=56162775 instance=ExtResource("3_gehtf")]
 points = PackedVector2Array(0, 0, 70, 0)
-closed = true
-width = 4.0
-default_color = Color(0.3882353, 1, 1, 0.5019608)
 
+[node name="@Line2D@22051" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="1" unique_id=1461200430 instance=ExtResource("3_gehtf")]
+points = PackedVector2Array(70, 0, 116, 0)
+
+[node name="@Line2D@22052" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="2" unique_id=1880906245 instance=ExtResource("3_gehtf")]
+points = PackedVector2Array(116, 0, 120, 45)
+
+[node name="@Line2D@22053" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="3" unique_id=1382406548 instance=ExtResource("3_gehtf")]
+points = PackedVector2Array(120, 45, 121, 89)
+
+[node name="@Line2D@22054" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="4" unique_id=1791001638 instance=ExtResource("3_gehtf")]
+points = PackedVector2Array(120, 45, 165, 44)
+
+[node name="@Line2D@22055" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="5" unique_id=1928495020 instance=ExtResource("3_gehtf")]
+points = PackedVector2Array(116, 0, 123, -43)
+
+[editable path="Cell"]
+[editable path="Cell/Hurtbox2D"]
+[editable path="Cell2"]
+[editable path="Cell2/Hurtbox2D"]
+[editable path="Cell6"]
+[editable path="Cell6/Hurtbox2D"]
+[editable path="Cell3"]
+[editable path="Cell3/Hurtbox2D"]
+[editable path="Cell4"]
+[editable path="Cell4/Hurtbox2D"]
+[editable path="Cell5"]
+[editable path="Cell5/Hurtbox2D"]
 [editable path="Core"]
 [editable path="Core/Hurtbox2D"]

@@ -14,6 +14,7 @@ height = 42.0
 script = ExtResource("1_cjhyy")
 health = 5.0
 repair_rate = 1.0
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1975990942]
 self_modulate = Color(0.19387385, 0.6540687, 0.13022849, 1)

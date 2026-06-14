@@ -49,13 +49,21 @@ func calculate_core_connections():
 
 	var core: Cell
 
-	for cell: Cell in get_children():
+	for child in get_children():
+		if not child is Cell:
+			continue
+		var cell := child as Cell
+
 		if cell.is_core:
 			core = cell
-			break
+
+		cell.core_children.clear()
+		cell.core_parents.clear()
+
 
 	fill_core_connections(core)
 
+# NOTE. Adding a bunch of temp arrays cuz godot doesn't correctly work with direct references
 func fill_core_connections(cell: Cell) -> void:
 	var shape = cell.get_node("Hurtbox2D/CollisionShape2D").shape.duplicate()
 	var distance_check_mult := 1.25
@@ -77,21 +85,25 @@ func fill_core_connections(cell: Cell) -> void:
 	query.exclude = [cell.get_node("Hurtbox2D").get_rid()]
 
 	var results = dss.intersect_shape(query)
+	var temp_array_core_children: Array
 	for result in results:
 		var colliding_cell: Cell = result.collider.owner
 		if cell.core_parents.has(colliding_cell):
 			continue
 
-		var cell_connector: Line2D = CELL_CONNECTOR.instantiate()
-		var my_array: Array
-		my_array.append(cell.position)
-		my_array.append(colliding_cell.position)
-		cell_connector.points = my_array
+		temp_array_core_children.append(colliding_cell)
+		var temp_array_core_parents: Array
+		temp_array_core_parents.append(cell)
+		colliding_cell.core_parents = temp_array_core_parents
 
+		var cell_connector: Line2D = CELL_CONNECTOR.instantiate()
+		var temp_array: Array
+		temp_array.append(cell.position)
+		temp_array.append(colliding_cell.position)
+		cell_connector.points = temp_array
 		cell_connectors.add_child(cell_connector)
 		cell_connector.owner = self
 
-		colliding_cell.core_parents.clear()
-		colliding_cell.core_parents.append(cell)
-
 		fill_core_connections(colliding_cell)
+
+	cell.core_children = temp_array_core_children

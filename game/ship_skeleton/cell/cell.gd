@@ -8,6 +8,7 @@ signal destroyed
 @export var is_core := false
 @export var health: float
 @export var core_parents: Array[Cell]
+@export var core_children: Array[Cell]
 @export var repair_rate: float
 
 var is_destroyed := false
@@ -61,6 +62,8 @@ func _on_health_depleted() -> void:
 	modulate.a = 0.5
 	hurtbox_2d.monitorable = false
 	is_destroyed = true
+	for child_cell: Cell in core_children:
+		child_cell.health_component.current_health = 0
 
 func _on_hit(hitbox: ComponentHitbox2D) -> void:
 	health_component.take_damage(hitbox.damage)

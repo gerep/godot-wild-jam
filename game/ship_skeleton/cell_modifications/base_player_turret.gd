@@ -1,11 +1,8 @@
 class_name BasePlayerTurret
 extends Node2D
 
-@onready var shooting_pos: Marker2D = $ShootingPos
+@onready var shooting_pos: Marker2D = %ShootingPos
 
-
-func _ready() -> void:
-	pass # Replace with function body.
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"shoot"):
