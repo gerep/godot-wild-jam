@@ -11,7 +11,6 @@ var auto_move_target: Vector2
 
 @onready var _hurtbox_2d: ComponentHurtbox2D = %Hurtbox2D
 @onready var _experience: ComponentExperience = %Experience
-@onready var _ship_skeleton: Node2D = %ShipSkeleton
 
 
 func _ready() -> void:

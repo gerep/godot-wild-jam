@@ -1,11 +1,11 @@
 class_name Enemy
 extends CharacterBody2D
 
-@export var health: float
-@export var xp: int
-
-@onready var _hurtbox_2d: ComponentHurtbox2D = %Hurtbox2D
-@onready var _health_component: ComponentHealth = %Health
+#@export var health: float
+#@export var xp: int
+#
+#@onready var _hurtbox_2d: ComponentHurtbox2D = %Hurtbox2D
+#@onready var _health_component: ComponentHealth = %Health
 
 # TODO
 #
