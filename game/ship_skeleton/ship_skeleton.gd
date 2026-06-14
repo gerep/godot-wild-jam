@@ -89,6 +89,7 @@ func fill_core_connections(cell: Cell) -> void:
 		cell_connector.points = my_array
 
 		cell_connectors.add_child(cell_connector)
+		cell_connector.owner = self
 
 		colliding_cell.core_parents.clear()
 		colliding_cell.core_parents.append(cell)

@@ -4,8 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://73o17dpehsvx" path="res://game/ship_skeleton/cell/cell.tscn" id="2_oj6ym"]
 [ext_resource type="Script" uid="uid://b8q0gvn2dj335" path="res://game/ship_skeleton/cell_modifications/base_player_turret.gd" id="3_tw0ep"]
 [ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="4_nvvbi"]
+[ext_resource type="PackedScene" uid="uid://cdeg2ih3g8ys4" path="res://game/ship_skeleton/cell_connector/cell_connector.tscn" id="5_kwog3"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gecbi"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwr2t"]
 resource_local_to_scene = true
 radius = 45.0
 height = 90.0
@@ -22,7 +23,7 @@ is_core = true
 scale = Vector2(0.70312494, 0.703125)
 
 [node name="CollisionShape2D" parent="Core/Hurtbox2D" parent_id_path=PackedInt32Array(1463715219, 146611675) index="0" unique_id=2074960276]
-shape = SubResource("CapsuleShape2D_gecbi")
+shape = SubResource("CapsuleShape2D_fwr2t")
 
 [node name="BasePlayerTurret" type="Node2D" parent="Core" index="2" unique_id=1806903983]
 script = ExtResource("3_tw0ep")
@@ -38,6 +39,12 @@ texture = ExtResource("4_nvvbi")
 
 [node name="ShootingPos" type="Marker2D" parent="Core/BasePlayerTurret" index="2" unique_id=247378389]
 position = Vector2(39, 0)
+
+[node name="CellConnector" type="Line2D" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="0" unique_id=56162775 instance=ExtResource("5_kwog3")]
+points = PackedVector2Array(0, 0, 70, 0)
+closed = true
+width = 4.0
+default_color = Color(0.3882353, 1, 1, 0.5019608)
 
 [editable path="Core"]
 [editable path="Core/Hurtbox2D"]
