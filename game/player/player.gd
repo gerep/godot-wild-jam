@@ -22,10 +22,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	if is_auto_moving:
 		return
 
-	if event.is_action_pressed(&"shoot"):
-		var direction := global_position.direction_to(get_global_mouse_position())
-		Projectile.create(self, global_position, direction, Projectiles.SIMPLE_BULLET)
-
 
 func _physics_process(delta: float) -> void:
 	if is_auto_moving:
