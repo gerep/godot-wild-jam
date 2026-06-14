@@ -1,5 +1,5 @@
 class_name CollisionLayers
-extends Node
+extends Object
 
 const WORLD = 1
 const PLAYER_COLLISION = 2
