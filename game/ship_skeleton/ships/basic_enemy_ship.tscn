@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c7dum68n4yu4c"]
+
+[ext_resource type="PackedScene" uid="uid://bf4ndmq7p4rge" path="res://game/ship_skeleton/ship_skeleton.tscn" id="1_qnsh4"]
+[ext_resource type="PackedScene" uid="uid://73o17dpehsvx" path="res://game/ship_skeleton/cell/cell.tscn" id="2_bcme0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7g1m"]
+resource_local_to_scene = true
+radius = 21.0
+height = 42.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6lbsd"]
+resource_local_to_scene = true
+radius = 45.0
+height = 90.0
+
+[node name="BasicEnemyShip" unique_id=1402492542 instance=ExtResource("1_qnsh4")]
+
+[node name="Cell" parent="." index="0" unique_id=1435320636 instance=ExtResource("2_bcme0")]
+position = Vector2(70, 0)
+
+[node name="Sprite2D" parent="Cell" index="0" unique_id=1975990942]
+self_modulate = Color(0.9272763, 0.2491239, 0.46881247, 1)
+
+[node name="CollisionShape2D" parent="Cell/Hurtbox2D" parent_id_path=PackedInt32Array(1435320636, 146611675) index="0" unique_id=2074960276]
+shape = SubResource("CapsuleShape2D_v7g1m")
+
+[node name="Core" parent="." index="1" unique_id=1463715219 instance=ExtResource("2_bcme0")]
+is_core = true
+
+[node name="Sprite2D" parent="Core" index="0" unique_id=1975990942]
+self_modulate = Color(0.9272763, 0.2491239, 0.46881247, 1)
+scale = Vector2(0.70312494, 0.703125)
+
+[node name="CollisionShape2D" parent="Core/Hurtbox2D" parent_id_path=PackedInt32Array(1463715219, 146611675) index="0" unique_id=2074960276]
+shape = SubResource("CapsuleShape2D_6lbsd")
+
+[editable path="Cell"]
+[editable path="Cell/Hurtbox2D"]
+[editable path="Core"]
+[editable path="Core/Hurtbox2D"]

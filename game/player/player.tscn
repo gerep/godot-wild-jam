@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cvsoqkyn4dyd4" path="res://game/player/player.gd" id="1_8v7lr"]
 [ext_resource type="PackedScene" uid="uid://b4154adjjbvvc" path="res://components/hurtbox/component_hurtbox_2d.tscn" id="3_8soms"]
-[ext_resource type="PackedScene" uid="uid://bf4ndmq7p4rge" path="res://game/ship_skeleton/ship_skeleton.tscn" id="4_5fytw"]
+[ext_resource type="PackedScene" uid="uid://bh2y05ourewx5" path="res://game/ship_skeleton/ships/basic_player_ship.tscn" id="4_5fytw"]
 [ext_resource type="PackedScene" uid="uid://bcuolpxigwcwo" path="res://components/experience/component_experience.tscn" id="4_a4w0n"]
 
 [node name="Player" type="CharacterBody2D" unique_id=956162283 groups=["players"]]
@@ -24,5 +24,4 @@ _mult_xp_increase = 1.25
 [node name="Hurtbox2D" parent="Components" unique_id=146611675 instance=ExtResource("3_8soms")]
 unique_name_in_owner = true
 
-[node name="ShipSkeleton" parent="." unique_id=1402492542 instance=ExtResource("4_5fytw")]
-unique_name_in_owner = true
+[node name="BasicPlayerShip" parent="." unique_id=1402492542 instance=ExtResource("4_5fytw")]

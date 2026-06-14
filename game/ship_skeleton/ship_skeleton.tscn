@@ -1,44 +1,6 @@
 [gd_scene format=3 uid="uid://bf4ndmq7p4rge"]
 
 [ext_resource type="Script" uid="uid://p57h3besvdad" path="res://game/ship_skeleton/ship_skeleton.gd" id="1_0h88w"]
-[ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="1_nscq2"]
-[ext_resource type="Script" uid="uid://b8q0gvn2dj335" path="res://game/player/base_player_turret.gd" id="3_y8qy0"]
-[ext_resource type="PackedScene" uid="uid://73o17dpehsvx" path="res://game/ship_skeleton/cell/cell.tscn" id="5_y8qy0"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0h88w"]
-resource_local_to_scene = true
-radius = 45.0
-height = 90.0
 
 [node name="ShipSkeleton" type="Node2D" unique_id=1402492542]
 script = ExtResource("1_0h88w")
-
-[node name="Cell" parent="." unique_id=1435320636 instance=ExtResource("5_y8qy0")]
-position = Vector2(70, 0)
-
-[node name="Core" parent="." unique_id=957584381 instance=ExtResource("5_y8qy0")]
-is_core = true
-
-[node name="Sprite2D" parent="Core" index="0" unique_id=1975990942]
-scale = Vector2(0.70312494, 0.703125)
-
-[node name="CollisionShape2D" parent="Core/Hurtbox2D" parent_id_path=PackedInt32Array(957584381, 146611675) index="0" unique_id=2074960276]
-shape = SubResource("CapsuleShape2D_0h88w")
-
-[node name="BaseTurret" type="Node2D" parent="Core" unique_id=1737286293]
-script = ExtResource("3_y8qy0")
-
-[node name="Sprite2D" type="Sprite2D" parent="Core/BaseTurret" unique_id=790662049]
-scale = Vector2(0.265625, 0.265625)
-texture = ExtResource("1_nscq2")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Core/BaseTurret" unique_id=959161909]
-position = Vector2(26.999996, 0)
-scale = Vector2(0.171875, 0.078125)
-texture = ExtResource("1_nscq2")
-
-[node name="ShootingPos" type="Marker2D" parent="Core/BaseTurret" unique_id=882168165]
-position = Vector2(39, 0)
-
-[editable path="Core"]
-[editable path="Core/Hurtbox2D"]
