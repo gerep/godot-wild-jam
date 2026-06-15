@@ -6,11 +6,17 @@ extends Projectile
 
 func _ready() -> void:
 	_hitbox_2d.hit.connect(_on_hit)
+	_hitbox_2d.hit_body.connect(_on_hit_body)
 	_hitbox_2d.damage = _damage
+
 
 func _physics_process(delta: float) -> void:
 	global_position += _direction * _speed * delta
 
 
 func _on_hit(hurtbox: ComponentHurtbox2D) -> void:
+	queue_free()
+
+
+func _on_hit_body(body: Node2D) -> void:
 	queue_free()

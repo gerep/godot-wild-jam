@@ -13,6 +13,7 @@ static func create(shooter: Node2D, pos: Vector2, direction: Vector2, projectile
 	projectile.setup(projectile_data, direction)
 	projectile.global_position = pos
 	shooter.get_tree().root.add_child(projectile)
+	projectile.hitbox_2d.set_collision_mask_value(CollisionLayers.WORLD, true)
 
 	if shooter is Player:
 		projectile.hitbox_2d.set_collision_mask_value(CollisionLayers.ENEMY_HURTBOX, true)
