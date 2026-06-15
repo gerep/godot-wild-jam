@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c83jf374t2uyf"]
+
+[ext_resource type="PackedScene" uid="uid://6kn2hv7iovmw" path="res://game/xp_orb/xp_orb.tscn" id="1_lqbfr"]
+[ext_resource type="Texture2D" uid="uid://434aswuvw071" path="res://game/xp_orb/xp_orb_data/xp_orbs/medium_xp_orb/medium_xp_orb.svg" id="2_n0rp1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lqbfr"]
+resource_local_to_scene = true
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n0rp1"]
+resource_local_to_scene = true
+radius = 13.0
+
+[node name="MediumXpOrb" unique_id=119372424 instance=ExtResource("1_lqbfr")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1444255762]
+texture = ExtResource("2_n0rp1")
+
+[node name="CollisionShape2D" parent="Hitbox2D" parent_id_path=PackedInt32Array(1358559902) index="0" unique_id=1055038057]
+shape = SubResource("CircleShape2D_lqbfr")
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=1421578560]
+shape = SubResource("CircleShape2D_n0rp1")
+
+[editable path="Hitbox2D"]

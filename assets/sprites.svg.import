@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5oji2fytr2bi"
-path="res://.godot/imported/small_xp_orb.png-032e12ec1c8b7349221ef2ba97d83ece.ctex"
+uid="uid://wfu456fy8a44"
+path="res://.godot/imported/sprites.svg-3de0a23bb576a309499d2855bd837d3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/xp_orb/xp_orb_data/xp_orbs/small_xp_orb.png"
-dest_files=["res://.godot/imported/small_xp_orb.png-032e12ec1c8b7349221ef2ba97d83ece.ctex"]
+source_file="res://assets/sprites.svg"
+dest_files=["res://.godot/imported/sprites.svg-3de0a23bb576a309499d2855bd837d3b.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
