@@ -2,14 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://73o17dpehsvx" path="res://game/ship_skeleton/cell/cell.tscn" id="1_pff0w"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uwugc"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pff0w"]
 resource_local_to_scene = true
 radius = 21.0
 height = 42.0
 
 [node name="BasicCell" unique_id=1435320636 instance=ExtResource("1_pff0w")]
 
+[node name="Sprite2D" parent="." index="0" unique_id=1975990942]
+rotation = 1.5707964
+
 [node name="CollisionShape2D" parent="Hurtbox2D" parent_id_path=PackedInt32Array(146611675) index="0" unique_id=2074960276]
-shape = SubResource("CapsuleShape2D_uwugc")
+shape = SubResource("CapsuleShape2D_pff0w")
 
 [editable path="Hurtbox2D"]

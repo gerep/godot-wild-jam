@@ -6,6 +6,8 @@ const SPEED = 300.0
 const TRANSPORTING_SPEED = 1000.0
 const AUTO_MOVE_STOP_DISTANCE = 4.0
 
+@export var rotation_speed := 10.0
+
 var is_auto_moving: bool = false
 var auto_move_target: Vector2
 # We use it to keep track of which area the player is in. This helps with the enemy attacks.
@@ -43,6 +45,8 @@ func _physics_process(delta: float) -> void:
 
 		return
 
+	_rotate_towards_mouse(delta)
+
 	var direction := Input.get_vector(&"move_left", &"move_right", &"move_up", &"move_down")
 	velocity = direction * SPEED
 
@@ -60,6 +64,11 @@ func auto_move_to(pos: Vector2) -> void:
 	auto_move_target = pos
 	velocity = Vector2.ZERO
 	_set_collision_shapes_disabled(true)
+
+
+func _rotate_towards_mouse(delta: float) -> void:
+	var target_rotation := global_position.direction_to(get_global_mouse_position()).angle()
+	rotation = rotate_toward(rotation, target_rotation, rotation_speed * delta)
 
 
 func _set_collision_shapes_disabled(disabled: bool) -> void:

@@ -27,13 +27,14 @@ height = 42.0
 core_children = [NodePath("../BasicCell"), NodePath("../BasicCell2")]
 
 [node name="Sprite2D" parent="CoreCell" index="0" unique_id=1975990942]
+rotation = 1.5707964
 scale = Vector2(0.68750006, 0.68750006)
 
 [node name="CollisionShape2D" parent="CoreCell/Hurtbox2D" parent_id_path=PackedInt32Array(1435320636, 146611675) index="0" unique_id=2074960276]
 shape = SubResource("CapsuleShape2D_kwog3")
 
 [node name="BasicCell" parent="." index="1" unique_id=352178458 node_paths=PackedStringArray("core_parents") instance=ExtResource("4_fwr2t")]
-position = Vector2(68, 2)
+position = Vector2(0, 65)
 core_parents = [NodePath("../CoreCell")]
 
 [node name="CollisionShape2D" parent="BasicCell/Hurtbox2D" parent_id_path=PackedInt32Array(352178458, 146611675) index="0" unique_id=2074960276]
@@ -42,7 +43,7 @@ shape = SubResource("CapsuleShape2D_fwr2t")
 [node name="BasePlayerTurret" parent="BasicCell" index="3" unique_id=192713686 instance=ExtResource("3_gecbi")]
 
 [node name="BasicCell2" parent="." index="2" unique_id=906669145 node_paths=PackedStringArray("core_parents") instance=ExtResource("4_fwr2t")]
-position = Vector2(-67, 3)
+position = Vector2(0, -65)
 core_parents = [NodePath("../CoreCell")]
 
 [node name="CollisionShape2D" parent="BasicCell2/Hurtbox2D" parent_id_path=PackedInt32Array(906669145, 146611675) index="0" unique_id=2074960276]
@@ -51,10 +52,11 @@ shape = SubResource("CapsuleShape2D_grfuh")
 [node name="BasePlayerTurret" parent="BasicCell2" index="3" unique_id=1687703012 instance=ExtResource("3_gecbi")]
 
 [node name="CellConnector" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="0" unique_id=56162775 instance=ExtResource("5_kwog3")]
-points = PackedVector2Array(0, 0, 68, 2)
+position = Vector2(-71, -65)
+points = PackedVector2Array(70, 65, 70, 1)
 
 [node name="@Line2D@21648" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="1" unique_id=1521109650 instance=ExtResource("5_kwog3")]
-points = PackedVector2Array(0, 0, -67, 3)
+points = PackedVector2Array(0, 0, 0, 65)
 
 [editable path="CoreCell"]
 [editable path="CoreCell/Hurtbox2D"]
