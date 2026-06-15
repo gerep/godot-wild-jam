@@ -11,8 +11,17 @@ script = ExtResource("1_wu7i3")
 
 [node name="Area" parent="." unique_id=495972852 instance=ExtResource("4_p0s4x")]
 
+[node name="Enemy" parent="Area" unique_id=175218643 instance=ExtResource("4_ybvrr")]
+position = Vector2(467, -428)
+
+[node name="Enemy2" parent="Area" unique_id=738581634 instance=ExtResource("4_ybvrr")]
+position = Vector2(-497, 455)
+
 [node name="Area2" parent="." unique_id=427362067 instance=ExtResource("4_p0s4x")]
 position = Vector2(30, -2611)
+
+[node name="Enemy3" parent="Area2" unique_id=935148652 instance=ExtResource("4_ybvrr")]
+position = Vector2(-369, 114)
 
 [node name="Area3" parent="." unique_id=307216731 instance=ExtResource("4_p0s4x")]
 position = Vector2(-2603, -2615)
@@ -25,6 +34,3 @@ position = Vector2(-1283, -2158)
 rotation = 1.5707964
 
 [node name="Player" parent="." unique_id=956162283 instance=ExtResource("2_hbsx8")]
-
-[node name="Enemy" parent="." unique_id=175218643 instance=ExtResource("4_ybvrr")]
-position = Vector2(467, -428)

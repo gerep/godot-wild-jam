@@ -8,6 +8,8 @@ const AUTO_MOVE_STOP_DISTANCE = 4.0
 
 var is_auto_moving: bool = false
 var auto_move_target: Vector2
+# We use it to keep track of which area the player is in. This helps with the enemy attacks.
+var current_area: ArenaArea
 
 @onready var _hurtbox_2d: ComponentHurtbox2D = %ExpHurtbox2D
 @onready var _experience: ComponentExperience = %Experience
