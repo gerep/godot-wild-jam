@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://6kn2hv7iovmw"]
 
 [ext_resource type="Script" uid="uid://bbu44kn6sy5fj" path="res://game/xp_orb/xp_orb.gd" id="1_p0xse"]
-[ext_resource type="Texture2D" uid="uid://c5oji2fytr2bi" path="res://game/xp_orb/xp_orb_data/xp_orbs/small_xp_orb.png" id="2_6wtkf"]
+[ext_resource type="Texture2D" uid="uid://cb54akgys7tji" path="res://game/xp_orb/xp_orb_data/xp_orbs/small_gene.svg" id="2_6wtkf"]
 [ext_resource type="PackedScene" uid="uid://c1flcsvrxwav7" path="res://components/hitbox/component_hitbox_2d.tscn" id="3_mhopk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_brhfh"]
@@ -20,8 +20,5 @@ collision_mask = 2048
 
 [node name="CollisionShape2D" parent="Hitbox2D" index="0" unique_id=1055038057]
 shape = SubResource("CircleShape2D_brhfh")
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1567246028]
-unique_name_in_owner = true
 
 [editable path="Hitbox2D"]
