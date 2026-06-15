@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1flcsvrxwav7"]
 
-[ext_resource type="Script" uid="uid://bh07e5hs6eihb" path="res://lib/components/2d/hitbox/component_hitbox_2d.gd" id="1_dhyth"]
+[ext_resource type="Script" uid="uid://bh07e5hs6eihb" path="res://components/hitbox/component_hitbox_2d.gd" id="1_dhyth"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_huh8w"]
 resource_local_to_scene = true

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="63.999992"
+   height="63.999985"
+   viewBox="0 0 63.999992 63.999985"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="sprites.svg"
+   inkscape:export-filename="sprites.svg"
+   inkscape:export-xdpi="90.050003"
+   inkscape:export-ydpi="90.050003"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="false"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="4"
+     inkscape:cx="71.125001"
+     inkscape:cy="201.875"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     labelstyle="default"
+     inkscape:antialias-rendering="true"
+     showguides="false">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-64.000008"
+       originy="-192.00002"
+       spacingx="32"
+       spacingy="32"
+       empcolor="#e50000"
+       empopacity="1"
+       color="#0031e5"
+       opacity="0.32156863"
+       empspacing="2"
+       enabled="true"
+       visible="true" />
+    <sodipodi:guide
+       position="-64.000008,255.99998"
+       orientation="0,1920"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1856,255.99998"
+       orientation="1080,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1856,-824"
+       orientation="0,-1920"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-64.000008,-824"
+       orientation="-1080,0"
+       id="guide4"
+       inkscape:locked="false" />
+    <inkscape:page
+       x="0"
+       y="0"
+       width="63.999992"
+       height="63.999985"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-64.000008,-192.00002)">
+    <g
+       id="g2"
+       inkscape:label="basic_bullet"
+       inkscape:export-filename="../game/projectile/projectile_data/projectiles/simple_bullet/simple_bullet.svg"
+       inkscape:export-xdpi="90.050003"
+       inkscape:export-ydpi="90.050003"
+       transform="matrix(2.3775991,0,0,2.3775991,-132.24951,-308.58219)">
+      <circle
+         style="opacity:0.732238;fill:#1c71d8;stroke:none;stroke-width:0.899;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;paint-order:stroke fill markers"
+         id="path1"
+         cx="96"
+         cy="224"
+         r="13.458954" />
+      <circle
+         style="opacity:0.732238;fill:#99c1f1;stroke:#86b1e3;stroke-width:0.899;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;paint-order:stroke fill markers"
+         id="path2"
+         cx="96"
+         cy="224"
+         r="11.624998" />
+    </g>
+  </g>
+</svg>

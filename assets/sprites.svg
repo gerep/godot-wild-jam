@@ -28,8 +28,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="4"
-     inkscape:cx="172.875"
-     inkscape:cy="109.375"
+     inkscape:cx="71.125001"
+     inkscape:cy="201.875"
      inkscape:window-width="1920"
      inkscape:window-height="1008"
      inkscape:window-x="0"
@@ -1284,7 +1284,7 @@
        inkscape:export-filename="../game/xp_orb/xp_orb_data/xp_orbs/small_gene.svg"
        inkscape:export-xdpi="90.050003"
        inkscape:export-ydpi="90.050003"
-       transform="matrix(0.69886272,0,0,0.69886272,28.909179,28.909179)">
+       transform="matrix(0.42313252,0,0,0.42313252,55.379278,55.379278)">
       <g
          id="g57"
          inkscape:label="gene_inner"
@@ -1383,7 +1383,7 @@
     <g
        id="g58-7"
        inkscape:label="medium_gene"
-       transform="matrix(0.69886264,0,0,0.69886264,92.909186,28.909187)"
+       transform="matrix(0.60545882,0,0,0.60545882,101.87595,37.875955)"
        inkscape:export-filename="../game/xp_orb/xp_orb_data/xp_orbs/medium_gene.svg"
        inkscape:export-xdpi="90.050003"
        inkscape:export-ydpi="90.050003">
@@ -1593,7 +1593,7 @@
     <g
        id="g121"
        inkscape:label="big_gene"
-       transform="matrix(0.69886264,0,0,0.69886264,156.56945,28.909187)"
+       transform="matrix(0.76729018,0,0,0.76729018,150.00041,22.340144)"
        inkscape:export-filename="../game/xp_orb/xp_orb_data/xp_orbs/big_gene.svg"
        inkscape:export-xdpi="90.050003"
        inkscape:export-ydpi="90.050003">
@@ -1928,6 +1928,26 @@
          cy="96"
          r="25.125"
          inkscape:label="gene_circle" />
+    </g>
+    <g
+       id="g2"
+       inkscape:label="basic_bullet"
+       inkscape:export-filename="../game/projectile/projectile_data/projectiles/simple_bullet/simple_bullet.svg"
+       inkscape:export-xdpi="90.050003"
+       inkscape:export-ydpi="90.050003"
+       transform="matrix(1.6291138,0,0,1.6291138,-60.394924,-140.92149)">
+      <circle
+         style="opacity:0.732238;fill:#1c71d8;stroke:#86b1e3;stroke-width:0.899;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;paint-order:stroke fill markers"
+         id="path1"
+         cx="96"
+         cy="224"
+         r="13.458954" />
+      <circle
+         style="opacity:0.732238;fill:#99c1f1;stroke:#86b1e3;stroke-width:0.899;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;paint-order:stroke fill markers"
+         id="path2"
+         cx="96"
+         cy="224"
+         r="11.624998" />
     </g>
   </g>
 </svg>
