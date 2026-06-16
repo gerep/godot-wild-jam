@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 			global_position = auto_move_target
 			velocity = Vector2.ZERO
 			is_auto_moving = false
-			_set_collision_shapes_disabled(false)
+			#_set_collision_shapes_disabled(false)
 		else:
 			var auto_move_direction := global_position.direction_to(auto_move_target)
 			velocity = auto_move_direction * TRANSPORTING_SPEED
@@ -63,7 +63,7 @@ func auto_move_to(pos: Vector2) -> void:
 	is_auto_moving = true
 	auto_move_target = pos
 	velocity = Vector2.ZERO
-	_set_collision_shapes_disabled(true)
+	#_set_collision_shapes_disabled(true)
 
 
 func _rotate_towards_mouse(delta: float) -> void:
@@ -71,13 +71,13 @@ func _rotate_towards_mouse(delta: float) -> void:
 	rotation = rotate_toward(rotation, target_rotation, rotation_speed * delta)
 
 
-func _set_collision_shapes_disabled(disabled: bool) -> void:
-	_set_collision_shapes_disabled_recursive(self, disabled)
-
-
-func _set_collision_shapes_disabled_recursive(node: Node, disabled: bool) -> void:
-	if node is CollisionShape2D:
-		node.set_deferred(&"disabled", disabled)
-
-	for child in node.get_children():
-		_set_collision_shapes_disabled_recursive(child, disabled)
+#func _set_collision_shapes_disabled(disabled: bool) -> void:
+	#_set_collision_shapes_disabled_recursive(self, disabled)
+#
+#
+#func _set_collision_shapes_disabled_recursive(node: Node, disabled: bool) -> void:
+	#if node is CollisionShape2D:
+		#node.set_deferred(&"disabled", disabled)
+#
+	#for child in node.get_children():
+		#_set_collision_shapes_disabled_recursive(child, disabled)

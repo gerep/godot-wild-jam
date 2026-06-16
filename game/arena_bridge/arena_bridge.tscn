@@ -1,37 +1,52 @@
 [gd_scene format=3 uid="uid://c67rqhkt2da3c"]
 
-[ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="1_b34jr"]
 [ext_resource type="Script" uid="uid://6gfn442rw1m0" path="res://game/arena_bridge/arena_bridge.gd" id="1_tf0vu"]
+[ext_resource type="Texture2D" uid="uid://bv6vn07apsmjk" path="res://game/arena_bridge/arena_bridge.svg" id="2_tf0vu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b34jr"]
-size = Vector2(180, 70)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tf0vu"]
+radius = 5.0
+height = 1688.0
 
 [node name="ArenaTransition" type="Node2D" unique_id=1750952575]
 script = ExtResource("1_tf0vu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=170811246]
-self_modulate = Color(1, 1, 1, 0.28235295)
-scale = Vector2(2.59375, 10.460937)
-texture = ExtResource("1_b34jr")
+position = Vector2(844, 0)
+texture = ExtResource("2_tf0vu")
 
 [node name="StartTriggerArea2D" type="Area2D" parent="." unique_id=1470185995]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 0
+collision_mask = 16
+monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StartTriggerArea2D" unique_id=1725081981]
-position = Vector2(0, -636)
-shape = SubResource("RectangleShape2D_b34jr")
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StartTriggerArea2D" unique_id=88260855]
+polygon = PackedVector2Array(59, -458, 105, -277, 133, -79, 127, 63, 105, 251, 47, 461, 6, 457, 30, 396, 72, 250, 94, 84, 95, -74, 71, -261, 9, -462)
 
 [node name="EndTriggerArea2D" type="Area2D" parent="." unique_id=1532361452]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 0
+collision_mask = 16
+monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EndTriggerArea2D" unique_id=1189749098]
-position = Vector2(0, 636)
-shape = SubResource("RectangleShape2D_b34jr")
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="EndTriggerArea2D" unique_id=228943184]
+position = Vector2(1685, 0)
+rotation = 3.1415927
+polygon = PackedVector2Array(59, -458, 105, -277, 133, -79, 127, 63, 105, 251, 47, 461, 6, 457, 30, 396, 72, 250, 94, 84, 95, -74, 71, -261, 9, -462)
 
 [node name="StartExitMarker2D" type="Marker2D" parent="." unique_id=2088123193]
-position = Vector2(0, -742)
+position = Vector2(0, -1)
 
 [node name="EndExitMarker2D2" type="Marker2D" parent="." unique_id=211147883]
-position = Vector2(0, 742)
+position = Vector2(1688, -1)
+
+[node name="BorderCollision" type="StaticBody2D" parent="." unique_id=230090649]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderCollision" unique_id=386368091]
+position = Vector2(844, -464)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_tf0vu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BorderCollision" unique_id=563102433]
+position = Vector2(844, 462)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_tf0vu")

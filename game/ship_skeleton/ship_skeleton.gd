@@ -33,6 +33,8 @@ func _ready() -> void:
 		# Activate proper hurtbox layer, since cell can be owned by player or enemy.
 		if owner is Player:
 			cell.activate_hurtbox_layer(CollisionLayers.PLAYER_HURTBOX)
+			if cell is CoreCell:
+				cell.activate_hurtbox_layer(CollisionLayers.PLAYER_CORE_COLLISION)
 		else:
 			cell.activate_hurtbox_layer(CollisionLayers.ENEMY_HURTBOX)
 

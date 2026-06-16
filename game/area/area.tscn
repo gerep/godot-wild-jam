@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b8s7r2s04sqw3"]
 
-[ext_resource type="Texture2D" uid="uid://1ml5obg52a88" path="res://icon.svg" id="1_7iivh"]
 [ext_resource type="Script" uid="uid://cqniipdu8ep4p" path="res://game/area/area.gd" id="1_fafbg"]
+[ext_resource type="Texture2D" uid="uid://hnfs0sg4cppf" path="res://game/area/arena_bubble.svg" id="2_fafbg"]
+[ext_resource type="PackedScene" uid="uid://c67rqhkt2da3c" path="res://game/arena_bridge/arena_bridge.tscn" id="3_ea661"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7iivh"]
 size = Vector2(1359, 1326)
@@ -10,16 +11,29 @@ size = Vector2(1359, 1326)
 script = ExtResource("1_fafbg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1563155781]
-modulate = Color(1, 1, 1, 0.25490198)
-scale = Vector2(12, 12)
-texture = ExtResource("1_7iivh")
+texture = ExtResource("2_fafbg")
 
 [node name="Boundary" type="StaticBody2D" parent="." unique_id=1401375968]
 collision_mask = 0
 
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Boundary" unique_id=1986630964]
+position = Vector2(617, -748)
+rotation = 1.5707964
+polygon = PackedVector2Array(-397, 148, -325, 4, -213, -162, -84, -298, 94, -432, 280, -525, 277.99994, -588.00006, -390, -312, -464, 144)
+
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Boundary" unique_id=1486995425]
 position = Vector2(-746, -619)
-polygon = PackedVector2Array(120, -145, 1375, -147, 1374, -103, 116, -90, 95, -90, 75, -78, 57, -62, 38, -39, 31, -24, 27, 1243, 41, 1279, 67, 1307, 99, 1330, 129, 1342, 1353, 1342, 1377, 1336, 1411, 1315, 1441, 1284, 1460, 1254, 1467, 1228, 1469, 1173, 1463, 21, 1461, -18, 1446, -50, 1411, -82, 1375, -102, 1375, -146, 1513, 2, 1511, 1249, 1376, 1385, 108, 1386, -21, 1244, -21, -24)
+polygon = PackedVector2Array(-397, 148, -325, 4, -213, -162, -84, -298, 94, -432, 280, -525, 277, -606, -390, -312, -455, 150)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Boundary" unique_id=756025916]
+position = Vector2(-618, 752)
+rotation = 4.712389
+polygon = PackedVector2Array(-396.99994, 154.00003, -325, 4, -213, -162, -84, -298, 94, -432, 282, -526, 281.99997, -578.00006, -390, -312, -456.99994, 153.00003)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Boundary" unique_id=916486552]
+position = Vector2(751, 623)
+rotation = 3.1415927
+polygon = PackedVector2Array(-396.99994, 154.00003, -325, 4, -213, -162, -84, -298, 94, -432, 280, -525, 281.99997, -578.00006, -390, -312, -456.99994, 153.00003)
 
 [node name="PlayerDetector" type="Area2D" parent="." unique_id=1482901104]
 collision_layer = 0
@@ -28,3 +42,17 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" unique_id=1842263201]
 position = Vector2(-4.5, 4)
 shape = SubResource("RectangleShape2D_7iivh")
+
+[node name="ArenaTransition2" parent="." unique_id=1750952575 instance=ExtResource("3_ea661")]
+position = Vector2(-2832, 3)
+
+[node name="ArenaTransition" parent="." unique_id=2109252777 instance=ExtResource("3_ea661")]
+position = Vector2(1143, 2)
+
+[node name="ArenaTransition3" parent="." unique_id=438253375 instance=ExtResource("3_ea661")]
+position = Vector2(0, 1144)
+rotation = 1.5707964
+
+[node name="ArenaTransition4" parent="." unique_id=1171611887 instance=ExtResource("3_ea661")]
+position = Vector2(0, -2831)
+rotation = 1.5707964
