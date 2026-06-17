@@ -5,8 +5,8 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kmhev"]
 resource_local_to_scene = true
-radius = 21.0
-height = 42.0
+radius = 31.0
+height = 62.0
 
 [node name="CoreCell" unique_id=1435320636 instance=ExtResource("1_83jxq")]
 script = ExtResource("2_kmhev")

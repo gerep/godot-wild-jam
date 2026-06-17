@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bf4ndmq7p4rge" path="res://game/ship_skeleton/ship_skeleton.tscn" id="1_qnsh4"]
 [ext_resource type="PackedScene" uid="uid://dobbdkhwdy6k7" path="res://game/ship_skeleton/cell/cells/core_cell/core_cell.tscn" id="2_qnsh4"]
 [ext_resource type="PackedScene" uid="uid://cdeg2ih3g8ys4" path="res://game/ship_skeleton/cell_connector/cell_connector.tscn" id="3_6lbsd"]
-[ext_resource type="PackedScene" uid="uid://cm6tq3xwihkxl" path="res://game/ship_skeleton/cell/cells/basic_cell/basic_cell.tscn" id="3_bcme0"]
+[ext_resource type="PackedScene" uid="uid://cm6tq3xwihkxl" path="res://game/ship_skeleton/cell/cells/basic_cell/medium_basic_cell.tscn" id="3_bcme0"]
 
 [node name="BasicEnemyShip" unique_id=1402492542 instance=ExtResource("1_qnsh4")]
 

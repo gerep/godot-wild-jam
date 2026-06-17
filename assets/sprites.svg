@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="false"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.125"
-     inkscape:cx="915.99999"
-     inkscape:cy="2940"
+     inkscape:zoom="1"
+     inkscape:cx="265.5"
+     inkscape:cy="424.5"
      inkscape:window-width="1920"
      inkscape:window-height="1008"
      inkscape:window-x="0"
@@ -1957,6 +1957,102 @@
          r="11.624998" />
     </g>
     <g
+       id="g38"
+       inkscape:label="small_cell"
+       transform="matrix(0.20643794,0,0,0.20643794,-33.687812,266.12182)"
+       inkscape:export-filename="../game/ship_skeleton/cell/cells/basic_cell/small_basic_cell.svg"
+       inkscape:export-xdpi="90.050003"
+       inkscape:export-ydpi="90.050003">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use33"
+         id="use37"
+         transform="translate(410.57634)" />
+    </g>
+    <g
+       id="g2-7"
+       inkscape:label="medium_cell"
+       inkscape:export-filename="../game/ship_skeleton/cell/cells/basic_cell/medium_basic_cell.svg"
+       inkscape:export-xdpi="90.050003"
+       inkscape:export-ydpi="90.050003"
+       transform="matrix(1.8024094,0,0,1.8024094,-33.368182,-51.739701)">
+      <circle
+         style="opacity:0.732238;fill:#1c71d8;stroke:#ffffff;stroke-width:0.899;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path1-6"
+         cx="96"
+         cy="224"
+         r="13.458954" />
+      <ellipse
+         style="opacity:0.732238;fill:#3584e4;stroke:none;stroke-width:0.290809;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;paint-order:stroke fill markers"
+         id="path2-4"
+         cx="7.0169539"
+         cy="251.86177"
+         rx="4.8424611"
+         ry="2.9202254"
+         transform="rotate(-22.361843)" />
+      <ellipse
+         style="opacity:0.732238;fill:#3584e4;stroke:none;stroke-width:0.173891;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;paint-order:stroke fill markers"
+         id="path2-4-9"
+         cx="1.5060937"
+         cy="253.12967"
+         rx="2.8955824"
+         ry="1.7461685"
+         transform="rotate(-22.361843)" />
+      <ellipse
+         style="opacity:1;fill:#f6f5f4;fill-opacity:1;stroke:none;stroke-width:0.581531;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:1.2;stroke-opacity:1;paint-order:markers fill stroke"
+         id="path32"
+         cx="-14.260642"
+         cy="234.34671"
+         rx="4.1181731"
+         ry="2.3420541"
+         transform="rotate(-26.314752)" />
+    </g>
+    <g
+       id="g35"
+       inkscape:label="big_cell"
+       inkscape:export-filename="../game/ship_skeleton/cell/cells/basic_cell/big_basic_cell.svg"
+       inkscape:export-xdpi="90.050003"
+       inkscape:export-ydpi="90.050003"
+       transform="matrix(0.7464206,0,0,0.7464206,41.888538,41.489017)"
+       style="display:inline">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#g2-7"
+         id="use33"
+         transform="matrix(2.0000002,0,0,2.0000002,-55.326243,-288.00006)"
+         style="display:inline" />
+    </g>
+    <g
+       id="g36"
+       inkscape:label="large_cell"
+       inkscape:export-filename="../game/ship_skeleton/cell/cells/basic_cell/large_basic_cell.svg"
+       inkscape:export-xdpi="90.050003"
+       inkscape:export-ydpi="90.050003"
+       transform="matrix(0.74614972,0,0,0.74614972,-29.188362,41.601687)">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#g35"
+         id="use35"
+         transform="matrix(2,0,0,2,29.826523,-287.99996)" />
+    </g>
+    <g
+       id="g37"
+       inkscape:label="extra_large_cell"
+       inkscape:export-filename="../game/ship_skeleton/cell/cells/basic_cell/extra_large_basic_cell.svg"
+       inkscape:export-xdpi="90.050003"
+       inkscape:export-ydpi="90.050003"
+       transform="matrix(0.59169303,0,0,0.59169303,-47.497822,105.85566)">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use35"
+         id="use36"
+         transform="matrix(1.8921045,0,0,1.8921045,-10.239151,-371.11547)" />
+    </g>
+    <g
        id="g3"
        inkscape:label="arena_bubble"
        inkscape:export-filename="../game/area/arena_bubble.svg"
@@ -2013,6 +2109,11 @@
          id="use30"
          transform="matrix(0,-0.71839468,-1.3919925,0,13991.187,10052.262)"
          inkscape:label="br_ring" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#circle3"
+         id="use31" />
     </g>
     <g
        id="g4"
@@ -2021,7 +2122,7 @@
        inkscape:export-xdpi="90.050003"
        inkscape:export-ydpi="90.050003"
        transform="matrix(0.66697258,0,0,1.3174475,953.94343,-7931.3215)"
-       style="display:none">
+       style="display:inline">
       <rect
          style="display:none;opacity:1;fill:#9bc1f3;fill-opacity:0.160784;stroke:#1a5fb4;stroke-width:0.989176;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;stroke-opacity:1;paint-order:stroke fill markers"
          id="rect4-4-1"
