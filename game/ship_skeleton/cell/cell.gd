@@ -14,6 +14,7 @@ var _related_movemenet_collision_shape: CollisionShape2D
 
 @onready var hurtbox_2d: ComponentHurtbox2D = %Hurtbox2D
 @onready var health_component: ComponentHealth = %Health
+@onready var sprite_2d: Sprite2D = %Sprite2D
 
 
 func _ready() -> void:
@@ -29,11 +30,12 @@ func _physics_process(delta: float) -> void:
 
 		if can_restore:
 			health_component.current_health += repair_rate * delta
+			(sprite_2d.material as ShaderMaterial).set_shader_parameter("hp_ratio", health_component.get_current_health_percentage())
+
 			if health_component.current_health >= health_component.max_health:
 				restored.emit()
 				_related_movemenet_collision_shape.disabled = false
 				hurtbox_2d.monitorable = true
-				modulate.a = 1.0
 				is_destroyed = false
 		elif health_component.current_health > 0:
 			health_component.current_health = 0
@@ -57,6 +59,8 @@ func _on_health_depleted() -> void:
 	modulate.a = 0.5
 	hurtbox_2d.monitorable = false
 	is_destroyed = true
+	(sprite_2d.material as ShaderMaterial).set_shader_parameter("hp_ratio", 0.0)
+
 	for child_cell: Cell in core_children:
 		child_cell.health_component.current_health = 0
 
