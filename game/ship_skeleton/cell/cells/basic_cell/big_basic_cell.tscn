@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://uwcx77t1tjb"]
+
+[ext_resource type="PackedScene" uid="uid://cm6tq3xwihkxl" path="res://game/ship_skeleton/cell/cells/basic_cell/medium_basic_cell.tscn" id="1_654sg"]
+[ext_resource type="Texture2D" uid="uid://dw8eyhjagpbgk" path="res://game/ship_skeleton/cell/cells/basic_cell/big_basic_cell.svg" id="2_2qipr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2qipr"]
+resource_local_to_scene = true
+radius = 63.0
+height = 126.0
+
+[node name="BigBasicCell" unique_id=1435320636 instance=ExtResource("1_654sg")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1975990942]
+texture = ExtResource("2_2qipr")
+
+[node name="CollisionShape2D" parent="Hurtbox2D" parent_id_path=PackedInt32Array(146611675) index="0" unique_id=2074960276]
+shape = SubResource("CapsuleShape2D_2qipr")
+
+[editable path="Hurtbox2D"]
