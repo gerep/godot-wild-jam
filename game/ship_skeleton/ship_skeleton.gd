@@ -43,6 +43,19 @@ func _ready() -> void:
 				destroyed.emit()
 			)
 
+func _process(delta: float) -> void:
+	counter_rotate(owner.rotation)
+
+
+func counter_rotate(rotation: float) -> void:
+	for child in get_children():
+		if not child is Cell:
+			continue
+		var cell = child as Cell
+
+		for cell_child in cell.get_children():
+			if cell_child is Sprite2D:
+				cell_child.rotation = -rotation
 
 # TOOL. Connects cells between each other depending on position relative to the core.
 func calculate_core_connections():

@@ -11,8 +11,9 @@ script = ExtResource("1_oml5i")
 rotation = 1.5707964
 texture = ExtResource("2_oml5i")
 
-[node name="TurretCannon" type="Sprite2D" parent="." unique_id=669926242]
-position = Vector2(23, 0)
+[node name="TurretCannon" type="Sprite2D" parent="TurretBase" unique_id=669926242]
+position = Vector2(-1.0053619e-06, -23)
+rotation = -1.5707964
 texture = ExtResource("3_jnh57")
 
 [node name="ShootingPos" type="Marker2D" parent="." unique_id=1957190253]

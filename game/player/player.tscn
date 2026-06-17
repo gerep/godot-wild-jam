@@ -26,3 +26,4 @@ unique_name_in_owner = true
 collision_layer = 2048
 
 [node name="BasicPlayerShip" parent="." unique_id=1402492542 instance=ExtResource("4_5fytw")]
+unique_name_in_owner = true

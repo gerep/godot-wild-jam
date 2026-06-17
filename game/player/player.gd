@@ -15,6 +15,7 @@ var current_area: ArenaArea
 
 @onready var _hurtbox_2d: ComponentHurtbox2D = %ExpHurtbox2D
 @onready var _experience: ComponentExperience = %Experience
+@onready var _basic_player_ship: ShipSkeleton = %BasicPlayerShip
 
 
 func _ready() -> void:
@@ -69,7 +70,6 @@ func auto_move_to(pos: Vector2) -> void:
 func _rotate_towards_mouse(delta: float) -> void:
 	var target_rotation := global_position.direction_to(get_global_mouse_position()).angle()
 	rotation = rotate_toward(rotation, target_rotation, rotation_speed * delta)
-
 
 #func _set_collision_shapes_disabled(disabled: bool) -> void:
 	#_set_collision_shapes_disabled_recursive(self, disabled)
