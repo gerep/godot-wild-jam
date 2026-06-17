@@ -4,8 +4,6 @@ extends Node2D
 signal restored
 signal destroyed
 
-# TODO. On core destroyed destroye owner too.
-@export var health: float
 @export var core_parents: Array[Cell]
 @export var core_children: Array[Cell]
 @export var repair_rate: float
@@ -22,8 +20,6 @@ func _ready() -> void:
 	hurtbox_2d.got_hit.connect(_on_hit)
 	health_component.health_depleted.connect(_on_health_depleted)
 
-	health_component.set_health(health)
-
 func _physics_process(delta: float) -> void:
 	if is_destroyed:
 		var can_restore := false
@@ -33,7 +29,7 @@ func _physics_process(delta: float) -> void:
 
 		if can_restore:
 			health_component.current_health += repair_rate * delta
-			if health_component.current_health >= health:
+			if health_component.current_health >= health_component.max_health:
 				restored.emit()
 				_related_movemenet_collision_shape.disabled = false
 				hurtbox_2d.monitorable = true

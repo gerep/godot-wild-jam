@@ -2,14 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://73o17dpehsvx" path="res://game/ship_skeleton/cell/cell.tscn" id="1_pff0w"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r4tuq"]
-resource_local_to_scene = true
-radius = 31.0
-height = 62.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_r4tuq"]
+radius = 24.0
 
 [node name="MediumBasicCell" unique_id=1435320636 instance=ExtResource("1_pff0w")]
 
 [node name="CollisionShape2D" parent="Hurtbox2D" parent_id_path=PackedInt32Array(146611675) index="0" unique_id=2074960276]
-shape = SubResource("CapsuleShape2D_r4tuq")
+shape = SubResource("CircleShape2D_r4tuq")
+
+[node name="Health" parent="." index="2" unique_id=562956058]
+max_health = 10.0
 
 [editable path="Hurtbox2D"]

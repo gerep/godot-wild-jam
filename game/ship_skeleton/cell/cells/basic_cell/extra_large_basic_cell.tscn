@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c5jb1txbmf3ex"]
+
+[ext_resource type="PackedScene" uid="uid://cm6tq3xwihkxl" path="res://game/ship_skeleton/cell/cells/basic_cell/medium_basic_cell.tscn" id="1_05sdy"]
+[ext_resource type="Texture2D" uid="uid://cqucs53afxryp" path="res://game/ship_skeleton/cell/cells/basic_cell/extra_large_basic_cell.svg" id="2_46aer"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_05sdy"]
+radius = 81.02469
+
+[node name="ExtraLargeBasicCell" unique_id=1435320636 instance=ExtResource("1_05sdy")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1975990942]
+texture = ExtResource("2_46aer")
+
+[node name="CollisionShape2D" parent="Hurtbox2D" parent_id_path=PackedInt32Array(146611675) index="0" unique_id=2074960276]
+shape = SubResource("CircleShape2D_05sdy")
+
+[node name="Health" parent="." index="2" unique_id=562956058]
+max_health = 25.0
+
+[editable path="Hurtbox2D"]

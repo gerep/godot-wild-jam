@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="17.127808"
-   height="17.127808"
-   viewBox="0 0 17.127808 17.127808"
+   width="20.746094"
+   height="20.746094"
+   viewBox="0 0 20.746094 20.746094"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
@@ -44,8 +44,8 @@
     <inkscape:grid
        id="grid1"
        units="px"
-       originx="-151.4361"
-       originy="-247.4361"
+       originx="-117.79007"
+       originy="-245.62695"
        spacingx="32"
        spacingy="32"
        empcolor="#e50000"
@@ -56,35 +56,35 @@
        enabled="true"
        visible="true" />
     <sodipodi:guide
-       position="3048.564,-2807.4362"
+       position="3082.2099,-2805.6269"
        orientation="0,-1"
        id="guide5"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="3048.564,-2807.4362"
+       position="3082.2099,-2805.6269"
        orientation="0,-1"
        id="guide8"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="1960.5639,-3895.4362"
+       position="1994.2099,-3893.627"
        orientation="1,0"
        id="guide9"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="1960.5639,-1719.4361"
+       position="1994.2099,-1717.6269"
        orientation="0,-1"
        id="guide11"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="872.56392,-2807.4362"
+       position="906.20994,-2805.6269"
        orientation="1,0"
        id="guide30"
        inkscape:locked="false" />
     <inkscape:page
        x="0"
        y="0"
-       width="17.127808"
-       height="17.127808"
+       width="20.746094"
+       height="20.746094"
        id="page2"
        margin="0"
        bleed="0" />
@@ -95,26 +95,15 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-151.4361,-247.43609)">
-    <g
-       id="g2"
-       inkscape:label="basic_bullet"
-       inkscape:export-filename="../game/projectile/projectile_data/projectiles/simple_bullet/simple_bullet.svg"
+     transform="translate(-117.79007,-245.62695)">
+    <circle
+       style="fill:#ff7800;stroke:#ffffff;stroke-width:0.529219;stroke-linecap:round;stroke-linejoin:bevel;stroke-dashoffset:1.2;paint-order:markers fill stroke"
+       id="circle4"
+       cx="128.16312"
+       cy="256"
+       r="10.108436"
+       inkscape:export-filename="../game/ship_skeleton/cell_modifications/turret_cannon.svg"
        inkscape:export-xdpi="90.050003"
-       inkscape:export-ydpi="90.050003"
-       transform="matrix(0.63629816,0,0,0.63629816,98.915377,113.46921)">
-      <circle
-         style="opacity:0.732238;fill:#1c71d8;stroke:none;stroke-width:0.899;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;paint-order:stroke fill markers"
-         id="path1"
-         cx="96"
-         cy="224"
-         r="13.458954" />
-      <circle
-         style="opacity:0.732238;fill:#99c1f1;stroke:#86b1e3;stroke-width:0.899;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;paint-order:stroke fill markers"
-         id="path2"
-         cx="96"
-         cy="224"
-         r="11.624998" />
-    </g>
+       inkscape:export-ydpi="90.050003" />
   </g>
 </svg>

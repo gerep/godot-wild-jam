@@ -7,23 +7,26 @@
 [ext_resource type="PackedScene" uid="uid://cm6tq3xwihkxl" path="res://game/ship_skeleton/cell/cells/basic_cell/medium_basic_cell.tscn" id="4_fwr2t"]
 [ext_resource type="PackedScene" uid="uid://cdeg2ih3g8ys4" path="res://game/ship_skeleton/cell_connector/cell_connector.tscn" id="5_kwog3"]
 [ext_resource type="PackedScene" uid="uid://uwcx77t1tjb" path="res://game/ship_skeleton/cell/cells/basic_cell/big_basic_cell.tscn" id="7_bgui2"]
+[ext_resource type="PackedScene" uid="uid://c5jb1txbmf3ex" path="res://game/ship_skeleton/cell/cells/basic_cell/extra_large_basic_cell.tscn" id="8_yl3a2"]
+[ext_resource type="PackedScene" uid="uid://g7r6jujgrh5a" path="res://game/ship_skeleton/cell/cells/basic_cell/large_basic_cell.tscn" id="9_3ioi8"]
 
 [node name="BasicPlayerShip" unique_id=1402492542 instance=ExtResource("1_2oay7")]
 
 [node name="SmallBasicCell" parent="." index="0" unique_id=1435320636 instance=ExtResource("2_grfuh")]
-position = Vector2(37, -1)
+position = Vector2(52, -1)
 
 [node name="CoreCell" parent="." index="1" unique_id=1704717635 node_paths=PackedStringArray("core_children") instance=ExtResource("2_kwog3")]
+position = Vector2(15, 0)
 core_children = [NodePath("../BasicCell2"), NodePath("../BasicCell")]
 
 [node name="BasicCell" parent="." index="2" unique_id=352178458 node_paths=PackedStringArray("core_parents") instance=ExtResource("4_fwr2t")]
-position = Vector2(-19, 44)
+position = Vector2(-3, 45)
 core_parents = [NodePath("../CoreCell")]
 
 [node name="BasePlayerTurret" parent="BasicCell" index="3" unique_id=192713686 instance=ExtResource("3_gecbi")]
 
 [node name="BasicCell2" parent="." index="3" unique_id=906669145 node_paths=PackedStringArray("core_parents") instance=ExtResource("4_fwr2t")]
-position = Vector2(-18, -42)
+position = Vector2(-5, -46)
 core_parents = [NodePath("../CoreCell")]
 
 [node name="BasePlayerTurret" parent="BasicCell2" index="3" unique_id=1687703012 instance=ExtResource("3_gecbi")]
@@ -35,4 +38,10 @@ points = PackedVector2Array(0, 0, 0, -65)
 points = PackedVector2Array(0, 0, 0, 65)
 
 [node name="BigBasicCell" parent="." index="5" unique_id=978672971 instance=ExtResource("7_bgui2")]
-position = Vector2(-64, 1)
+position = Vector2(-48, 1)
+
+[node name="ExtraLargeBasicCell" parent="." index="6" unique_id=982010402 instance=ExtResource("8_yl3a2")]
+position = Vector2(-283, 0)
+
+[node name="LargeBasicCell" parent="." index="7" unique_id=1347265738 instance=ExtResource("9_3ioi8")]
+position = Vector2(-142, 2)
