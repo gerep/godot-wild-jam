@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c5jb1txbmf3ex" path="res://game/ship_skeleton/cell/cells/basic_cell/extra_large_basic_cell.tscn" id="8_yl3a2"]
 [ext_resource type="PackedScene" uid="uid://g7r6jujgrh5a" path="res://game/ship_skeleton/cell/cells/basic_cell/large_basic_cell.tscn" id="9_3ioi8"]
 [ext_resource type="PackedScene" uid="uid://bu6qub3hmbqqu" path="res://game/ship_skeleton/cell/cells/regenerative_cell/medium_regenerative_cell.tscn" id="10_3ioi8"]
+[ext_resource type="PackedScene" uid="uid://8svcjvlnwaco" path="res://game/ship_skeleton/cell/cells/armored_cell/large_armored_cell.tscn" id="11_ni8jg"]
 
 [node name="BasicPlayerShip" unique_id=1402492542 instance=ExtResource("1_2oay7")]
 
@@ -48,4 +49,7 @@ position = Vector2(-283, 0)
 position = Vector2(-142, 2)
 
 [node name="MediumRegenerativeCell" parent="." index="8" unique_id=992663636 instance=ExtResource("10_3ioi8")]
-position = Vector2(90, 0)
+position = Vector2(60, 37)
+
+[node name="LargeArmoredCell" parent="." index="9" unique_id=352326631 instance=ExtResource("11_ni8jg")]
+position = Vector2(114, -31)

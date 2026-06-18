@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b7jm2w7pac35"]
+
+[ext_resource type="PackedScene" uid="uid://uwcx77t1tjb" path="res://game/ship_skeleton/cell/cells/basic_cell/big_basic_cell.tscn" id="1_8fnhj"]
+[ext_resource type="Shader" uid="uid://4ojyrld7fshk" path="res://game/ship_skeleton/cell/cell.gdshader" id="2_donwr"]
+[ext_resource type="Texture2D" uid="uid://brg1cy6pgbstk" path="res://game/ship_skeleton/cell/cells/armored_cell/big_armored_cell.svg" id="3_donwr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_donwr"]
+resource_local_to_scene = true
+shader = ExtResource("2_donwr")
+shader_parameter/hp_ratio = 1.0
+shader_parameter/is_hit_flash_active = false
+
+[node name="BigArmoredCell" unique_id=1435320636 instance=ExtResource("1_8fnhj")]
+repair_rate = 0.75
+
+[node name="Sprite2D" parent="." index="0" unique_id=1975990942]
+material = SubResource("ShaderMaterial_donwr")
+texture = ExtResource("3_donwr")
+
+[node name="Health" parent="." index="2" unique_id=562956058]
+max_health = 30.0
+
+[editable path="Hurtbox2D"]

@@ -4,16 +4,17 @@
 [ext_resource type="Shader" uid="uid://4ojyrld7fshk" path="res://game/ship_skeleton/cell/cell.gdshader" id="2_5gf46"]
 [ext_resource type="Texture2D" uid="uid://dfovxa0jo1yl5" path="res://game/ship_skeleton/cell/cells/regenerative_cell/big_regenerative_cell.svg" id="3_5gf46"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ubvuo"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5gf46"]
 resource_local_to_scene = true
 shader = ExtResource("2_5gf46")
 shader_parameter/hp_ratio = 1.0
 shader_parameter/is_hit_flash_active = false
 
 [node name="BigRegenerativeCell" unique_id=1435320636 instance=ExtResource("1_p3kry")]
+repair_rate = 0.75
 
 [node name="Sprite2D" parent="." index="0" unique_id=1975990942]
-material = SubResource("ShaderMaterial_ubvuo")
+material = SubResource("ShaderMaterial_5gf46")
 texture = ExtResource("3_5gf46")
 
 [node name="Health" parent="." index="2" unique_id=562956058]

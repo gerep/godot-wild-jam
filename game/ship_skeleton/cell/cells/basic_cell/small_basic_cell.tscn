@@ -2,12 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://cm6tq3xwihkxl" path="res://game/ship_skeleton/cell/cells/basic_cell/medium_basic_cell.tscn" id="1_7kfy5"]
 [ext_resource type="Texture2D" uid="uid://dc6s83443qvfc" path="res://game/ship_skeleton/cell/cells/basic_cell/small_basic_cell.svg" id="2_30epr"]
+[ext_resource type="Shader" uid="uid://4ojyrld7fshk" path="res://game/ship_skeleton/cell/cell.gdshader" id="2_wow4d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oka58"]
+resource_local_to_scene = true
+shader = ExtResource("2_wow4d")
+shader_parameter/hp_ratio = 1.0
+shader_parameter/is_hit_flash_active = false
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7kfy5"]
 
 [node name="SmallBasicCell" unique_id=1435320636 instance=ExtResource("1_7kfy5")]
+repair_rate = 0.5
 
 [node name="Sprite2D" parent="." index="0" unique_id=1975990942]
+material = SubResource("ShaderMaterial_oka58")
 texture = ExtResource("2_30epr")
 
 [node name="CollisionShape2D" parent="Hurtbox2D" parent_id_path=PackedInt32Array(146611675) index="0" unique_id=2074960276]
@@ -15,5 +24,6 @@ shape = SubResource("CircleShape2D_7kfy5")
 
 [node name="Health" parent="." index="2" unique_id=562956058]
 max_health = 5.0
+health_regeneration_rate = 0.5
 
 [editable path="Hurtbox2D"]

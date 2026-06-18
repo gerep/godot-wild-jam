@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dw8eyhjagpbgk" path="res://game/ship_skeleton/cell/cells/basic_cell/big_basic_cell.svg" id="2_2qipr"]
 [ext_resource type="Shader" uid="uid://4ojyrld7fshk" path="res://game/ship_skeleton/cell/cell.gdshader" id="2_q1gn2"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_w17yd"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q1gn2"]
 resource_local_to_scene = true
 shader = ExtResource("2_q1gn2")
 shader_parameter/hp_ratio = 1.0
@@ -14,9 +14,10 @@ shader_parameter/is_hit_flash_active = false
 radius = 36.013885
 
 [node name="BigBasicCell" unique_id=1435320636 instance=ExtResource("1_654sg")]
+repair_rate = 1.5
 
 [node name="Sprite2D" parent="." index="0" unique_id=1975990942]
-material = SubResource("ShaderMaterial_w17yd")
+material = SubResource("ShaderMaterial_q1gn2")
 texture = ExtResource("2_2qipr")
 
 [node name="CollisionShape2D" parent="Hurtbox2D" parent_id_path=PackedInt32Array(146611675) index="0" unique_id=2074960276]
