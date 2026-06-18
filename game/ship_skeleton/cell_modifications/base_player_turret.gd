@@ -11,7 +11,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		var direction := Vector2.RIGHT.rotated(global_rotation)
 		# HACK. Owner will be ship skeleton. But we need owner of ship skeleton.
 		Projectile.create(owner.owner, shooting_pos.global_position, direction, Projectiles.SIMPLE_BULLET)
-
+		AudioSystem.play_sfx(Sounds.BUBBLE_POP)
 	# NOTE. Disable turrent rotation for now.
 	#if event is InputEventMouseMotion:
 		#look_at(get_global_mouse_position())

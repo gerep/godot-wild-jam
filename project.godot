@@ -16,6 +16,14 @@ run/main_scene="uid://d1807vdljctud"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://dyq71t4hqle5t"
+
+[autoload]
+
+AudioSystem="*uid://cxa6mvxw3hrjy"
+
 [display]
 
 window/size/viewport_width=1920
@@ -26,6 +34,7 @@ window/stretch/mode="canvas_items"
 
 folder_colors={
 "res://assets/": "orange",
+"res://audio/": "yellow",
 "res://components/": "purple",
 "res://constants/": "green",
 "res://game/": "red",

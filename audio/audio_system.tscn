@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cxa6mvxw3hrjy"]
+
+[ext_resource type="Script" uid="uid://7unumgeixwyb" path="res://audio/audio_system.gd" id="1_q3cvo"]
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_q3cvo"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_q3cvo"]
+
+[node name="AudioSystem" type="Node" unique_id=1661046486]
+process_mode = 3
+script = ExtResource("1_q3cvo")
+
+[node name="SFXStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1541610063]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamPolyphonic_q3cvo")
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1257754447]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamInteractive_q3cvo")
