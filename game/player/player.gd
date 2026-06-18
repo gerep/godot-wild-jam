@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
-const SPEED = 300.0
+const SPEED = 700.0
 
 const TRANSPORTING_SPEED = 1000.0
 const AUTO_MOVE_STOP_DISTANCE = 4.0
