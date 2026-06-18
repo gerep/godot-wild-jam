@@ -3,8 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://uwcx77t1tjb" path="res://game/ship_skeleton/cell/cells/basic_cell/big_basic_cell.tscn" id="1_2x0rv"]
 [ext_resource type="Script" uid="uid://ck1gqnwn00iqd" path="res://game/ship_skeleton/cell/cells/core_cell/core_cell.gd" id="2_wko4p"]
 [ext_resource type="Shader" uid="uid://4ojyrld7fshk" path="res://game/ship_skeleton/cell/cell.gdshader" id="2_xtdc8"]
+[ext_resource type="Texture2D" uid="uid://dv730lqsmr80" path="res://game/ship_skeleton/cell/cells/core_cell/big_core_cell.svg" id="4_wko4p"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wko4p"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xtdc8"]
 resource_local_to_scene = true
 shader = ExtResource("2_xtdc8")
 shader_parameter/hp_ratio = 1.0
@@ -14,6 +15,7 @@ shader_parameter/is_hit_flash_active = false
 script = ExtResource("2_wko4p")
 
 [node name="Sprite2D" parent="." index="0" unique_id=1975990942]
-material = SubResource("ShaderMaterial_wko4p")
+material = SubResource("ShaderMaterial_xtdc8")
+texture = ExtResource("4_wko4p")
 
 [editable path="Hurtbox2D"]

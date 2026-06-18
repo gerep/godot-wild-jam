@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cm6tq3xwihkxl" path="res://game/ship_skeleton/cell/cells/basic_cell/medium_basic_cell.tscn" id="1_654sg"]
 [ext_resource type="Shader" uid="uid://4ojyrld7fshk" path="res://game/ship_skeleton/cell/cell.gdshader" id="2_q1gn2"]
-[ext_resource type="Texture2D" uid="uid://dv730lqsmr80" path="res://game/ship_skeleton/cell/cells/core_cell/big_core_cell.svg" id="3_q1gn2"]
+[ext_resource type="Texture2D" uid="uid://dw8eyhjagpbgk" path="res://game/ship_skeleton/cell/cells/basic_cell/big_basic_cell.svg" id="3_q1gn2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w17yd"]
 resource_local_to_scene = true
