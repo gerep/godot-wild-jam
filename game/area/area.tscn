@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cqniipdu8ep4p" path="res://game/area/area.gd" id="1_fafbg"]
 [ext_resource type="Texture2D" uid="uid://hnfs0sg4cppf" path="res://game/area/arena_bubble.svg" id="2_fafbg"]
-[ext_resource type="PackedScene" uid="uid://c67rqhkt2da3c" path="res://game/arena_bridge/arena_bridge.tscn" id="3_ea661"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7iivh"]
 size = Vector2(1359, 1326)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fafbg"]
+size = Vector2(52, 937.5)
 
 [node name="Area" type="Node2D" unique_id=495972852 groups=["areas"]]
 script = ExtResource("1_fafbg")
@@ -43,16 +45,91 @@ collision_mask = 2
 position = Vector2(-4.5, 4)
 shape = SubResource("RectangleShape2D_7iivh")
 
-[node name="ArenaTransition2" parent="." unique_id=1750952575 instance=ExtResource("3_ea661")]
-position = Vector2(-2832, 3)
+[node name="AreaCreation" type="Node2D" parent="." unique_id=1977424729]
 
-[node name="ArenaTransition" parent="." unique_id=2109252777 instance=ExtResource("3_ea661")]
-position = Vector2(1143, 2)
+[node name="WestCreationArea" type="Area2D" parent="AreaCreation" unique_id=801396723]
+position = Vector2(-1130, 0)
+collision_layer = 0
+collision_mask = 2
 
-[node name="ArenaTransition3" parent="." unique_id=438253375 instance=ExtResource("3_ea661")]
-position = Vector2(0, 1144)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCreation/WestCreationArea" unique_id=1298957306]
+shape = SubResource("RectangleShape2D_fafbg")
+
+[node name="NorthCreationArea" type="Area2D" parent="AreaCreation" unique_id=706701655]
+position = Vector2(0, -1133)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCreation/NorthCreationArea" unique_id=1542153924]
 rotation = 1.5707964
+shape = SubResource("RectangleShape2D_fafbg")
 
-[node name="ArenaTransition4" parent="." unique_id=1171611887 instance=ExtResource("3_ea661")]
-position = Vector2(0, -2831)
+[node name="SouthCreationArea" type="Area2D" parent="AreaCreation" unique_id=1817102077]
+position = Vector2(0, 1130)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCreation/SouthCreationArea" unique_id=1028679490]
 rotation = 1.5707964
+shape = SubResource("RectangleShape2D_fafbg")
+
+[node name="EastCreationArea" type="Area2D" parent="AreaCreation" unique_id=1284079051]
+position = Vector2(1126, 0)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCreation/EastCreationArea" unique_id=1599647433]
+shape = SubResource("RectangleShape2D_fafbg")
+
+[node name="Transport" type="Node2D" parent="." unique_id=719304312]
+
+[node name="WestTransportArea" type="Area2D" parent="Transport" unique_id=605026687]
+position = Vector2(-1218, 0)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transport/WestTransportArea" unique_id=2039810326]
+shape = SubResource("RectangleShape2D_fafbg")
+
+[node name="EastTransportArea" type="Area2D" parent="Transport" unique_id=1470922658]
+position = Vector2(1232, 0)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transport/EastTransportArea" unique_id=1089216346]
+position = Vector2(-18, 1.25)
+shape = SubResource("RectangleShape2D_fafbg")
+
+[node name="NorthTransportArea" type="Area2D" parent="Transport" unique_id=308157465]
+position = Vector2(0, -1239)
+rotation = 1.5707964
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transport/NorthTransportArea" unique_id=1844721722]
+position = Vector2(25, 1.25)
+shape = SubResource("RectangleShape2D_fafbg")
+
+[node name="SouthTransportArea" type="Area2D" parent="Transport" unique_id=613335447]
+position = Vector2(1, 1213)
+rotation = 1.5707964
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Transport/SouthTransportArea" unique_id=1119681408]
+position = Vector2(1, 1.25)
+shape = SubResource("RectangleShape2D_fafbg")
+
+[node name="Markers" type="Node2D" parent="." unique_id=1863105897]
+
+[node name="WestMarker" type="Marker2D" parent="Markers" unique_id=1119824998]
+position = Vector2(-1008, 0)
+
+[node name="NorthMarker" type="Marker2D" parent="Markers" unique_id=537814493]
+position = Vector2(0, -1022)
+
+[node name="SouthMarker" type="Marker2D" parent="Markers" unique_id=1937527924]
+position = Vector2(1, 1019)
+
+[node name="EastMarker" type="Marker2D" parent="Markers" unique_id=487803607]
+position = Vector2(1008, 0)

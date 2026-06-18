@@ -3,51 +3,11 @@
 [ext_resource type="Script" uid="uid://biw1lu5iws1o4" path="res://game/game_area/game_area.gd" id="1_wu7i3"]
 [ext_resource type="PackedScene" uid="uid://dedoe7ai17311" path="res://game/player/player.tscn" id="2_hbsx8"]
 [ext_resource type="PackedScene" uid="uid://b8s7r2s04sqw3" path="res://game/area/area.tscn" id="4_p0s4x"]
-[ext_resource type="PackedScene" uid="uid://ctcysahbtl4wg" path="res://game/enemies/enemy_test/enemy.tscn" id="4_ybvrr"]
 
 [node name="GameArea" type="Node2D" unique_id=1471830763]
 script = ExtResource("1_wu7i3")
 
 [node name="Area" parent="." unique_id=495972852 instance=ExtResource("4_p0s4x")]
 
-[node name="Enemy" parent="Area" unique_id=175218643 instance=ExtResource("4_ybvrr")]
-position = Vector2(467, -428)
-
-[node name="Enemy2" parent="Area" unique_id=738581634 instance=ExtResource("4_ybvrr")]
-position = Vector2(-497, 455)
-
-[node name="Area4" parent="." unique_id=1941673352 instance=ExtResource("4_p0s4x")]
-position = Vector2(3972, 3)
-
-[node name="ArenaTransition2" parent="Area4" index="3" unique_id=1750952575]
-visible = false
-
-[node name="Enemy" parent="Area4" unique_id=264839039 instance=ExtResource("4_ybvrr")]
-position = Vector2(467, -428)
-
-[node name="Enemy2" parent="Area4" unique_id=330188202 instance=ExtResource("4_ybvrr")]
-position = Vector2(-497, 455)
-
-[node name="Area2" parent="." unique_id=427362067 instance=ExtResource("4_p0s4x")]
-position = Vector2(0, -3968)
-
-[node name="ArenaTransition3" parent="Area2" index="5" unique_id=438253375]
-visible = false
-
-[node name="Enemy3" parent="Area2" unique_id=935148652 instance=ExtResource("4_ybvrr")]
-position = Vector2(-369, 114)
-
-[node name="Area3" parent="." unique_id=307216731 instance=ExtResource("4_p0s4x")]
-position = Vector2(3972, -3968)
-
-[node name="ArenaTransition2" parent="Area3" index="3" unique_id=1750952575]
-visible = false
-
-[node name="ArenaTransition3" parent="Area3" index="5" unique_id=438253375]
-visible = false
-
 [node name="Player" parent="." unique_id=956162283 instance=ExtResource("2_hbsx8")]
-
-[editable path="Area4"]
-[editable path="Area2"]
-[editable path="Area3"]
+position = Vector2(-940, 0)
