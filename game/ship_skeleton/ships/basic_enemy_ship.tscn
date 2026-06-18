@@ -1,74 +1,56 @@
 [gd_scene format=3 uid="uid://c7dum68n4yu4c"]
 
 [ext_resource type="PackedScene" uid="uid://bf4ndmq7p4rge" path="res://game/ship_skeleton/ship_skeleton.tscn" id="1_qnsh4"]
-[ext_resource type="PackedScene" uid="uid://dobbdkhwdy6k7" path="res://game/ship_skeleton/cell/cells/core_cell/core_cell.tscn" id="2_qnsh4"]
+[ext_resource type="PackedScene" uid="uid://dobbdkhwdy6k7" path="res://game/ship_skeleton/cell/cells/core_cell/medium_core_cell.tscn" id="2_qnsh4"]
 [ext_resource type="PackedScene" uid="uid://cdeg2ih3g8ys4" path="res://game/ship_skeleton/cell_connector/cell_connector.tscn" id="3_6lbsd"]
 [ext_resource type="PackedScene" uid="uid://cm6tq3xwihkxl" path="res://game/ship_skeleton/cell/cells/basic_cell/medium_basic_cell.tscn" id="3_bcme0"]
 
 [node name="BasicEnemyShip" unique_id=1402492542 instance=ExtResource("1_qnsh4")]
 
-[node name="CoreCell" parent="." index="0" unique_id=1435320636 node_paths=PackedStringArray("core_children") instance=ExtResource("2_qnsh4")]
+[node name="MediumCoreCell" parent="." index="0" unique_id=1435320636 node_paths=PackedStringArray("core_children") instance=ExtResource("2_qnsh4")]
 core_children = [NodePath("../BasicCell2"), NodePath("../BasicCell3"), NodePath("../BasicCell4")]
 
 [node name="BasicCell2" parent="." index="1" unique_id=787201621 node_paths=PackedStringArray("core_parents", "core_children") instance=ExtResource("3_bcme0")]
-position = Vector2(0, -44)
-core_parents = [NodePath("../CoreCell")]
+position = Vector2(0, -53)
+core_parents = [NodePath("../MediumCoreCell")]
 core_children = [NodePath("../BasicCell7")]
 
 [node name="BasicCell7" parent="." index="2" unique_id=1533604073 node_paths=PackedStringArray("core_parents") instance=ExtResource("3_bcme0")]
-position = Vector2(1, -88)
+position = Vector2(0, -109)
 core_parents = [NodePath("../BasicCell2")]
 
 [node name="BasicCell3" parent="." index="3" unique_id=664797769 node_paths=PackedStringArray("core_parents", "core_children") instance=ExtResource("3_bcme0")]
-position = Vector2(-31, 33)
-core_parents = [NodePath("../CoreCell")]
+position = Vector2(-38, 38)
+core_parents = [NodePath("../MediumCoreCell")]
 core_children = [NodePath("../BasicCell5")]
 
 [node name="BasicCell5" parent="." index="4" unique_id=1224560515 node_paths=PackedStringArray("core_parents") instance=ExtResource("3_bcme0")]
-position = Vector2(-59, 66)
+position = Vector2(-71, 77)
 core_parents = [NodePath("../BasicCell3")]
 
 [node name="BasicCell4" parent="." index="5" unique_id=748175480 node_paths=PackedStringArray("core_parents", "core_children") instance=ExtResource("3_bcme0")]
-position = Vector2(34, 31)
-core_parents = [NodePath("../CoreCell")]
+position = Vector2(36, 36)
+core_parents = [NodePath("../MediumCoreCell")]
 core_children = [NodePath("../BasicCell6")]
 
 [node name="BasicCell6" parent="." index="6" unique_id=1527645156 node_paths=PackedStringArray("core_parents") instance=ExtResource("3_bcme0")]
-position = Vector2(62, 64)
+position = Vector2(70, 75)
 core_parents = [NodePath("../BasicCell4")]
 
-[node name="@Line2D@24131" type="Line2D" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="0" unique_id=56162775 instance=ExtResource("3_6lbsd")]
+[node name="@Line2D@24131" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="0" unique_id=56162775 instance=ExtResource("3_6lbsd")]
 points = PackedVector2Array(0, 0, 0, -44)
-closed = true
-width = 4.0
-default_color = Color(0.3882353, 1, 1, 0.5019608)
 
-[node name="@Line2D@24132" type="Line2D" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="1" unique_id=938506581 instance=ExtResource("3_6lbsd")]
+[node name="@Line2D@24132" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="1" unique_id=938506581 instance=ExtResource("3_6lbsd")]
 points = PackedVector2Array(0, -44, 1, -88)
-closed = true
-width = 4.0
-default_color = Color(0.3882353, 1, 1, 0.5019608)
 
-[node name="@Line2D@24133" type="Line2D" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="2" unique_id=2053825661 instance=ExtResource("3_6lbsd")]
+[node name="@Line2D@24133" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="2" unique_id=2053825661 instance=ExtResource("3_6lbsd")]
 points = PackedVector2Array(0, 0, -31, 33)
-closed = true
-width = 4.0
-default_color = Color(0.3882353, 1, 1, 0.5019608)
 
-[node name="@Line2D@24134" type="Line2D" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="3" unique_id=1425214517 instance=ExtResource("3_6lbsd")]
+[node name="@Line2D@24134" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="3" unique_id=1425214517 instance=ExtResource("3_6lbsd")]
 points = PackedVector2Array(-31, 33, -59, 66)
-closed = true
-width = 4.0
-default_color = Color(0.3882353, 1, 1, 0.5019608)
 
-[node name="@Line2D@24135" type="Line2D" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="4" unique_id=131469641 instance=ExtResource("3_6lbsd")]
+[node name="@Line2D@24135" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="4" unique_id=131469641 instance=ExtResource("3_6lbsd")]
 points = PackedVector2Array(0, 0, 34, 31)
-closed = true
-width = 4.0
-default_color = Color(0.3882353, 1, 1, 0.5019608)
 
-[node name="@Line2D@24136" type="Line2D" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="5" unique_id=408925453 instance=ExtResource("3_6lbsd")]
+[node name="@Line2D@24136" parent="CellConnectors" parent_id_path=PackedInt32Array(1905180700) index="5" unique_id=408925453 instance=ExtResource("3_6lbsd")]
 points = PackedVector2Array(34, 31, 62, 64)
-closed = true
-width = 4.0
-default_color = Color(0.3882353, 1, 1, 0.5019608)

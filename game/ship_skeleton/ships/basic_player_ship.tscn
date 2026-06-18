@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bf4ndmq7p4rge" path="res://game/ship_skeleton/ship_skeleton.tscn" id="1_2oay7"]
 [ext_resource type="PackedScene" uid="uid://de33domo5ul3j" path="res://game/ship_skeleton/cell/cells/basic_cell/small_basic_cell.tscn" id="2_grfuh"]
-[ext_resource type="PackedScene" uid="uid://dobbdkhwdy6k7" path="res://game/ship_skeleton/cell/cells/core_cell/core_cell.tscn" id="2_kwog3"]
+[ext_resource type="PackedScene" uid="uid://dobbdkhwdy6k7" path="res://game/ship_skeleton/cell/cells/core_cell/medium_core_cell.tscn" id="2_kwog3"]
 [ext_resource type="PackedScene" uid="uid://dbr5ppouefhpn" path="res://game/ship_skeleton/cell_modifications/base_player_turret.tscn" id="3_gecbi"]
 [ext_resource type="PackedScene" uid="uid://cm6tq3xwihkxl" path="res://game/ship_skeleton/cell/cells/basic_cell/medium_basic_cell.tscn" id="4_fwr2t"]
 [ext_resource type="PackedScene" uid="uid://cdeg2ih3g8ys4" path="res://game/ship_skeleton/cell_connector/cell_connector.tscn" id="5_kwog3"]

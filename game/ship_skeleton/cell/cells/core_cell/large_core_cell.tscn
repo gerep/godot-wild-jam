@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bymda0hpdmpsx"]
+
+[ext_resource type="PackedScene" uid="uid://g7r6jujgrh5a" path="res://game/ship_skeleton/cell/cells/basic_cell/large_basic_cell.tscn" id="1_iky5t"]
+[ext_resource type="Script" uid="uid://ck1gqnwn00iqd" path="res://game/ship_skeleton/cell/cells/core_cell/core_cell.gd" id="2_ajyay"]
+[ext_resource type="Shader" uid="uid://4ojyrld7fshk" path="res://game/ship_skeleton/cell/cell.gdshader" id="2_onwp2"]
+[ext_resource type="Texture2D" uid="uid://cj3xhxfjwb70f" path="res://game/ship_skeleton/cell/cells/core_cell/large_core_cell.svg" id="4_3tskb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yr2aw"]
+resource_local_to_scene = true
+shader = ExtResource("2_onwp2")
+shader_parameter/hp_ratio = 1.0
+shader_parameter/is_hit_flash_active = false
+
+[node name="LargeCoreCell" unique_id=1435320636 instance=ExtResource("1_iky5t")]
+script = ExtResource("2_ajyay")
+
+[node name="Sprite2D" parent="." index="0" unique_id=1975990942]
+material = SubResource("ShaderMaterial_yr2aw")
+texture = ExtResource("4_3tskb")
+
+[editable path="Hurtbox2D"]

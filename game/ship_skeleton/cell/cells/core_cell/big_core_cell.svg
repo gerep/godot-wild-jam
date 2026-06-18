@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="74.84726"
+   height="74.84729"
+   viewBox="0 0 74.84726 74.84729"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="sprites.svg"
+   inkscape:export-filename="../game/area/arena_bubble.svg"
+   inkscape:export-xdpi="90.050003"
+   inkscape:export-ydpi="90.050003"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="false"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1"
+     inkscape:cx="265.5"
+     inkscape:cy="424.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     labelstyle="default"
+     inkscape:antialias-rendering="true"
+     showguides="true"
+     guidecolor="#f00000"
+     guideopacity="1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-171.66315"
+       originy="-725.57635"
+       spacingx="32"
+       spacingy="32"
+       empcolor="#e50000"
+       empopacity="0.11372549"
+       color="#0031e5"
+       opacity="0.15686275"
+       empspacing="2"
+       enabled="true"
+       visible="true" />
+    <sodipodi:guide
+       position="3028.3369,-2271.5763"
+       orientation="0,-1"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="3028.3369,-2271.5763"
+       orientation="0,-1"
+       id="guide8"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1940.3369,-3359.5763"
+       orientation="1,0"
+       id="guide9"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1940.3369,-1183.5763"
+       orientation="0,-1"
+       id="guide11"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="852.33685,-2271.5763"
+       orientation="1,0"
+       id="guide30"
+       inkscape:locked="false" />
+    <inkscape:page
+       x="0"
+       y="0"
+       width="74.84726"
+       height="74.84729"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-171.66315,-725.57635)">
+    <g
+       id="g39"
+       inkscape:label="big_core_cell"
+       inkscape:export-filename="../game/ship_skeleton/cell/cells/basic_cell/big_basic_cell.svg"
+       inkscape:export-xdpi="90.050003"
+       inkscape:export-ydpi="90.050003"
+       transform="matrix(0.7464206,0,0,0.7464206,41.888538,452.48902)"
+       style="display:inline;fill:#ed333b">
+      <circle
+         style="display:inline;opacity:0.732238;fill:#ed333b;stroke:#ffffff;stroke-width:0.899;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;stroke-opacity:1;paint-order:stroke fill markers"
+         id="circle40"
+         cx="96"
+         cy="224"
+         r="13.458954"
+         transform="matrix(3.6048192,0,0,3.6048192,-122.06261,-391.47947)" />
+      <ellipse
+         style="display:inline;opacity:0.732238;fill:#ed333b;stroke:none;stroke-width:0.290809;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;paint-order:stroke fill markers"
+         id="ellipse40"
+         cx="7.0169539"
+         cy="251.86177"
+         rx="4.8424611"
+         ry="2.9202254"
+         transform="matrix(3.3337354,-1.3714699,1.3714699,3.3337354,-122.06261,-391.47947)" />
+      <ellipse
+         style="display:inline;opacity:0.732238;fill:#ed333b;stroke:none;stroke-width:0.173891;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:1.2;paint-order:stroke fill markers"
+         id="ellipse41"
+         cx="1.5060937"
+         cy="253.12967"
+         rx="2.8955824"
+         ry="1.7461685"
+         transform="matrix(3.3337354,-1.3714699,1.3714699,3.3337354,-122.06261,-391.47947)" />
+      <ellipse
+         style="display:inline;opacity:1;fill:#f6f5f4;fill-opacity:1;stroke:none;stroke-width:0.581531;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:1.2;stroke-opacity:1;paint-order:markers fill stroke"
+         id="ellipse42"
+         cx="-14.260642"
+         cy="234.34671"
+         rx="4.1181731"
+         ry="2.3420541"
+         transform="matrix(3.2312601,-1.5980236,1.5980236,3.2312601,-122.06261,-391.47947)" />
+    </g>
+  </g>
+</svg>
