@@ -15,20 +15,20 @@
 [node name="BasicPlayerShip" unique_id=1402492542 instance=ExtResource("1_2oay7")]
 
 [node name="SmallBasicCell" parent="." index="0" unique_id=1435320636 instance=ExtResource("2_grfuh")]
-position = Vector2(52, -1)
+position = Vector2(52, 0)
 
 [node name="CoreCell" parent="." index="1" unique_id=1704717635 node_paths=PackedStringArray("core_children") instance=ExtResource("2_kwog3")]
 position = Vector2(15, 0)
 core_children = [NodePath("../BasicCell2"), NodePath("../BasicCell")]
 
 [node name="BasicCell" parent="." index="2" unique_id=352178458 node_paths=PackedStringArray("core_parents") instance=ExtResource("4_fwr2t")]
-position = Vector2(-3, 45)
+position = Vector2(-7, 51)
 core_parents = [NodePath("../CoreCell")]
 
 [node name="BasePlayerTurret" parent="BasicCell" index="3" unique_id=192713686 instance=ExtResource("3_gecbi")]
 
 [node name="BasicCell2" parent="." index="3" unique_id=906669145 node_paths=PackedStringArray("core_parents") instance=ExtResource("4_fwr2t")]
-position = Vector2(-5, -46)
+position = Vector2(-10, -52)
 core_parents = [NodePath("../CoreCell")]
 
 [node name="BasePlayerTurret" parent="BasicCell2" index="3" unique_id=1687703012 instance=ExtResource("3_gecbi")]
@@ -49,7 +49,7 @@ position = Vector2(-283, 0)
 position = Vector2(-142, 2)
 
 [node name="MediumRegenerativeCell" parent="." index="8" unique_id=992663636 instance=ExtResource("10_3ioi8")]
-position = Vector2(60, 37)
+position = Vector2(52, 39)
 
 [node name="LargeArmoredCell" parent="." index="9" unique_id=352326631 instance=ExtResource("11_ni8jg")]
-position = Vector2(114, -31)
+position = Vector2(80, -68)

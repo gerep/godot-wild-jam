@@ -9,8 +9,18 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0jsgn"]
 resource_local_to_scene = true
 shader = ExtResource("2_mnm1f")
+shader_parameter/crack_depth = 1.6670000791825
+shader_parameter/crack_scale = 3.0830000989425
+shader_parameter/crack_zebra_scale = 2.2070001048325
+shader_parameter/crack_zebra_amp = 0.0
+shader_parameter/crack_profile = 1.0
+shader_parameter/crack_slope = 50.0
+shader_parameter/crack_width = 0.010000000475
 shader_parameter/hp_ratio = 1.0
 shader_parameter/is_hit_flash_active = false
+shader_parameter/refraction_offset = Vector2(25, 25)
+shader_parameter/reflection_offset = Vector2(1, 1)
+shader_parameter/reflection_color = Color(0.00403009, 0.06998862, 0.10388207, 0.5019608)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ruldg"]
 radius = 25.0

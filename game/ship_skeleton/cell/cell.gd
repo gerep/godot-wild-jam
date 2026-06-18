@@ -22,6 +22,13 @@ func _ready() -> void:
 	hurtbox_2d.got_hit.connect(_on_hit)
 	health_component.health_depleted.connect(_on_health_depleted)
 
+func _process(delta: float) -> void:
+	var hp_ratio := health_component.get_current_health_percentage()
+	var crack_death := lerpf(0.0, 3, 1 - hp_ratio)
+	(sprite_2d.material as ShaderMaterial).set_shader_parameter("crack_depth", crack_death)
+	var crack_profile := lerpf(0.7, 1.1, 1 - hp_ratio)
+	(sprite_2d.material as ShaderMaterial).set_shader_parameter("crack_profile", crack_profile)
+
 func _physics_process(delta: float) -> void:
 	if is_destroyed:
 		var can_restore := false

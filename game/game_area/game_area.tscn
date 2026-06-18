@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://biw1lu5iws1o4" path="res://game/game_area/game_area.gd" id="1_wu7i3"]
 [ext_resource type="PackedScene" uid="uid://dedoe7ai17311" path="res://game/player/player.tscn" id="2_hbsx8"]
 [ext_resource type="PackedScene" uid="uid://b8s7r2s04sqw3" path="res://game/area/area.tscn" id="4_p0s4x"]
+[ext_resource type="PackedScene" uid="uid://ctcysahbtl4wg" path="res://game/enemies/enemy_test/enemy.tscn" id="4_ybvrr"]
 
 [node name="GameArea" type="Node2D" unique_id=1471830763]
 script = ExtResource("1_wu7i3")
@@ -10,4 +11,10 @@ script = ExtResource("1_wu7i3")
 [node name="Area" parent="." unique_id=495972852 instance=ExtResource("4_p0s4x")]
 
 [node name="Player" parent="." unique_id=956162283 instance=ExtResource("2_hbsx8")]
-position = Vector2(-940, 0)
+position = Vector2(33, 13)
+
+[node name="Enemy" parent="." unique_id=175218643 instance=ExtResource("4_ybvrr")]
+position = Vector2(407, -381)
+
+[node name="Enemy2" parent="." unique_id=978126931 instance=ExtResource("4_ybvrr")]
+position = Vector2(-438, 469)

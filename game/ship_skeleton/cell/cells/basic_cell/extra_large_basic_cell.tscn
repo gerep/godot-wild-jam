@@ -1,14 +1,7 @@
 [gd_scene format=3 uid="uid://c5jb1txbmf3ex"]
 
 [ext_resource type="PackedScene" uid="uid://cm6tq3xwihkxl" path="res://game/ship_skeleton/cell/cells/basic_cell/medium_basic_cell.tscn" id="1_05sdy"]
-[ext_resource type="Shader" uid="uid://4ojyrld7fshk" path="res://game/ship_skeleton/cell/cell.gdshader" id="2_5ioan"]
 [ext_resource type="Texture2D" uid="uid://cqucs53afxryp" path="res://game/ship_skeleton/cell/cells/basic_cell/extra_large_basic_cell.svg" id="2_46aer"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lvfbc"]
-resource_local_to_scene = true
-shader = ExtResource("2_5ioan")
-shader_parameter/hp_ratio = 1.0
-shader_parameter/is_hit_flash_active = false
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_05sdy"]
 radius = 81.02469
@@ -17,7 +10,6 @@ radius = 81.02469
 repair_rate = 2.5
 
 [node name="Sprite2D" parent="." index="0" unique_id=1975990942]
-material = SubResource("ShaderMaterial_lvfbc")
 texture = ExtResource("2_46aer")
 
 [node name="CollisionShape2D" parent="Hurtbox2D" parent_id_path=PackedInt32Array(146611675) index="0" unique_id=2074960276]
