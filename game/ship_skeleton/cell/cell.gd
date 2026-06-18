@@ -15,6 +15,7 @@ var _related_movemenet_collision_shape: CollisionShape2D
 @onready var hurtbox_2d: ComponentHurtbox2D = %Hurtbox2D
 @onready var health_component: ComponentHealth = %Health
 @onready var sprite_2d: Sprite2D = %Sprite2D
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
 
 
 func _ready() -> void:
@@ -65,4 +66,5 @@ func _on_health_depleted() -> void:
 		child_cell.health_component.current_health = 0
 
 func _on_hit(hitbox: ComponentHitbox2D) -> void:
+	animation_player.play(&"hit")
 	health_component.take_damage(hitbox.damage)
