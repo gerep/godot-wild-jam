@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ci0c6ij7neval"]
+
+[ext_resource type="PackedScene" uid="uid://uwcx77t1tjb" path="res://game/ship_skeleton/cell/cells/basic_cell/big_basic_cell.tscn" id="1_p3kry"]
+[ext_resource type="Shader" uid="uid://4ojyrld7fshk" path="res://game/ship_skeleton/cell/cell.gdshader" id="2_5gf46"]
+[ext_resource type="Texture2D" uid="uid://dfovxa0jo1yl5" path="res://game/ship_skeleton/cell/cells/regenerative_cell/big_regenerative_cell.svg" id="3_5gf46"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ubvuo"]
+resource_local_to_scene = true
+shader = ExtResource("2_5gf46")
+shader_parameter/hp_ratio = 1.0
+shader_parameter/is_hit_flash_active = false
+
+[node name="BigRegenerativeCell" unique_id=1435320636 instance=ExtResource("1_p3kry")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1975990942]
+material = SubResource("ShaderMaterial_ubvuo")
+texture = ExtResource("3_5gf46")
+
+[node name="Health" parent="." index="2" unique_id=562956058]
+max_health = 10.0
+health_regeneration_rate = 2.0
+
+[editable path="Hurtbox2D"]

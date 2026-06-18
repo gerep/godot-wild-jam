@@ -10,6 +10,8 @@ signal health_depleted()
 		max_health = value
 		max_health_changed.emit(value)
 
+@export var health_regeneration_rate := 0.0
+
 var current_health := 1.0:
 	set(value):
 		print("%s new health is %s." % [owner.name, value])
@@ -20,9 +22,16 @@ var current_health := 1.0:
 			health_depleted.emit()
 
 
+
 func _ready() -> void:
 	# Since current health won't consider value from @export.
 	current_health = max_health
+
+func _physics_process(delta: float) -> void:
+	if not is_zero_approx(health_regeneration_rate) \
+		and not is_equal_approx(current_health, max_health):
+
+		current_health += health_regeneration_rate * delta
 
 
 func get_current_health_percentage() -> float:

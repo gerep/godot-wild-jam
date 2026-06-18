@@ -44,7 +44,8 @@ func _ready() -> void:
 			)
 
 func _process(delta: float) -> void:
-	counter_rotate(owner.rotation)
+	if owner != null:
+		counter_rotate(owner.rotation)
 
 
 func counter_rotate(rotation: float) -> void:
