@@ -27,19 +27,19 @@ var grid_position := Vector2i.ZERO
 
 func _ready() -> void:
 	west_creation_area.body_entered.connect(_on_creation_area_body_entered.bind(&"west", west_creation_area))
-	west_transport_area.body_entered.connect(_on_transport_area_body_entered.bind(&"west"))
+	west_transport_area.area_entered.connect(_on_transport_area_body_entered.bind(&"west"))
 
 	east_creation_area.body_entered.connect(_on_creation_area_body_entered.bind(&"east", east_creation_area))
-	east_transport_area.body_entered.connect(_on_transport_area_body_entered.bind(&"east"))
+	east_transport_area.area_entered.connect(_on_transport_area_body_entered.bind(&"east"))
 
 	north_creation_area.body_entered.connect(_on_creation_area_body_entered.bind(&"north", north_creation_area))
-	north_transport_area.body_entered.connect(_on_transport_area_body_entered.bind(&"north"))
+	north_transport_area.area_entered.connect(_on_transport_area_body_entered.bind(&"north"))
 
 	south_creation_area.body_entered.connect(_on_creation_area_body_entered.bind(&"south", south_creation_area))
-	south_transport_area.body_entered.connect(_on_transport_area_body_entered.bind(&"south"))
+	south_transport_area.area_entered.connect(_on_transport_area_body_entered.bind(&"south"))
 
 
-func _on_transport_area_body_entered(_body: Node2D, side: StringName) -> void:
+func _on_transport_area_body_entered(_area: Area2D, side: StringName) -> void:
 	transport_requested.emit(self, side)
 
 

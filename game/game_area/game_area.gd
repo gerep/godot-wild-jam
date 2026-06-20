@@ -1,7 +1,7 @@
 class_name GameArea
 extends Node2D
 
-const ROOM_SPACING = 3000
+const ROOM_SPACING = 3250
 const AREA = preload("uid://b8s7r2s04sqw3")
 
 @onready var area: ArenaArea = $Area
