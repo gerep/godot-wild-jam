@@ -19,3 +19,7 @@ texture = ExtResource("3_jnh57")
 [node name="ShootingPos" type="Marker2D" parent="." unique_id=1957190253]
 unique_name_in_owner = true
 position = Vector2(35, 0)
+
+[node name="AttackCooldownTimer" type="Timer" parent="." unique_id=1691874727]
+unique_name_in_owner = true
+one_shot = true
